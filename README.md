@@ -2,11 +2,11 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2022 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2022 session called DA281 - Hands-On Session for SAP Data Intelligence: Connectivity and Integration.  
 
 ## Overview
 
-This session introduces attendees to...
+SAP Data Intelligence is our leading solution for data integration, management, processing, and orchestration across different data environments. Through hands-on experience focused on connectivity and system interoperability with ABAP systems, see how to use corresponding built-in operators in the SAP Data Intelligence solution to integrate with SAP S/4HANA, SAP Business Suite software, and the SAP BW/4HANA solution, or with technologies such as SAP Landscape Transformation Replication Server.
 
 ## Requirements
 
