@@ -1,4 +1,4 @@
-# Session ID - Session Title
+# DA281 - Hands-On Session for SAP Data Intelligence: Connectivity and Integration
 
 ## Description
 
