@@ -10,7 +10,11 @@ SAP Data Intelligence is our leading solution for data integration, management, 
 
 ## Requirements
 
-The requirements to follow the exercises in this repository are...
+The requirements to follow the exercises in this repository are:
+
+- Basic knowhow about the usage and scope of S/4HANA
+- General understanding of Enterprise Data Management and ETL (Extraction, Transformation, Load)
+- Basic programming skills in ABAP are of advantage
 
 ## Exercises
 
