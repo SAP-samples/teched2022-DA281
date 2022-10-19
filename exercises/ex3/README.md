@@ -52,25 +52,43 @@ For the integration of ABAP CDS Views in S/4HANA, SAP Data Intelligence provides
     ![RF Mapping Timestamp](img/RF_Mapping_Timestamp.png)
     - Click on the **OK** Button to save the mapping for the CDS View Z_CDS_EPM_PD_XX
 
-13. For the CDS View Z_CDS_EPM_PO_XX we want to filter the column GrossAmount for all rows which are >= 800 €. Click to filter the CDS View on the ![RF Filter GrossAmount](img/Filter_Icon.png) icon
+13. For the CDS View Z_CDS_EPM_PO_XX we want to filter the column GrossAmount for all rows which are >= 800 €. Click to filter the CDS View on the ![RF Filter Icon](img/Filter_Icon.png) icon
     - Scroll on the opened window until the column GrossAmount
     - Click on the left side on the left side on the field GrossAmount
     - Change the = operator to an >= from the drop-down
     -  Enter in the Value field on the ríght side the value **800**
-    -  
-14. Click on the Validate button and then on the execution button to run the replication
-15. After the replication is finished, click on the Data Intelligence Modeler banner at the top of the screen
-16. In the Drop-Down menu click on the Metadata Explorer row to browse the replicated data
+    ![RF Filter GrossAmount](img/RF_Filter_GrossAmount.png)
+    -  Click on the **OK** Button to save the mapping for the CDS View Z_CDS_EPM_PO_XX
+
+14. For the CDS View Z_CDS_EPM_SO we combine the mapping and filtering together for our replication. For the sales orders we are interested filtering for all printers within our orders. We want to also add within our replicated dataset a new column storing the exact timestamp of our replication
+    - For the filtering of all printers click on the filter icon and scroll down to the column ProductCategory
+    - In total three different printers are present within the ProductCategory column: **Laser Printers**, **Ink Jet Printers** and **Multifunction Printers**
+    - To filter for all items we click two times on the Add button to have three rows present for the three product categories
+    - Enter for each row in the filtering option one of the Product Categories as displayed in below picture
+    ![RF Filter ProductCategory](img/RF_Filter_ProductCategory.png)
+
+15. Click on the Validate button ![RF Validate Button](img/RF_Validate_Button.png)  to check if every check runs through smoothly. An ideal validation is displayed in belows image
+
+![RF Validation Check](img/RF_Validation_Check.png)
+
+16. After everything went through in the validation check we can deploy our Replication Flow by clicking on the deploy button ![RF Deploy Button](img/RF_Deploy_Button.png)
+
+17. After the deployment of the Replication Flow is completed, we can press the run button ![RF Run Button](img/RF_Run_Button.png) to start the replication with our specified settings
+
+18. After the replication is finished, click on the Data Intelligence Modeler banner at the top of the screen
+
+19. In the Drop-Down menu click on the Metadata Explorer row to browse the replicated data
 
 ![DropDown Metadata Explorer](img/DI_Pipeline_DropDown.png)
 
-15. In the newly opened tab click on the Browse Connections option to navigate the HANA database we replicated our data to
+20. In the newly opened tab click on the Browse Connections option to navigate the HANA database we replicated our data to
 
 ![Metadata Explorer](img/Metadata_Explorer_BrowseConnections.png)
 
-16. To navigate to the replicated datasets click through with the following steps
+21. To navigate to the replicated datasets click through with the following steps
     - Click on HANA_CLOUD tile
     - Click on TECHED_DA281 tile
     - Click on the replicated datasets **Z_CDS_EPM_SO_XX**, **Z_CDS_EPM_PO_XX**, **Z_CDS_EPM_PD_XX**
     - Click for each dataset on the Data Preview tab and explore for each dataset the data replicated
-17.  After the replication flow has successfully run and you explored the data, execute the Custom ABAP operator created in Exercise **Link_to_Custom_Operator_Ex** to create new sales orders
+
+22.  After the replication flow has successfully run and you explored the data, execute the Custom ABAP operator created in Exercise **Link_to_Custom_Operator_Ex** to create new sales orders
