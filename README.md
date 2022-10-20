@@ -16,11 +16,29 @@ The requirements to follow the exercises in this repository are:
 - General understanding of Enterprise Data Management and ETL (Extraction, Transformation, Load)
 - Basic programming skills in ABAP are of advantage
 
+## Deep Dive Demos and Hands On Exercises
+
+The main use cases behind this workshop are:
+- The extraction the Business Partner master data in S/4HANA's demo application Enterprise Procurement Model (EPM) and making the records available for the corporate Data Analysts in SAP HANA Cloud database.
+- Also persist the transactional data in HANA Cloud, i.e for EPM Sales Order objects which are built from joins over multiple EPM tables.
+- In both cases, any single change of these data sources in the S/4HANA system has to be instantly and automatically replicated to the related tables in HANA.
+- Additionally, the Sales Order data have to be enriched with Customer master data, for the initial load and then on every change committed to the EPM Sales Order data in S/4HANA.
+- In order to create test changes on the EPM Sales Order data without having access to the SAP GUI in the S/4HANA system, (a variant of) the EPM Data Generator reports needs to be executed as an ABAP Function Modul call from a Data Intelligence Pipeline.
+- The possibility of Replication Management System with the replication of CDS Views into a HANA Cloud target system
+
+The Deep Dive live demos and the hands-on Exercise contents reflect the above scenarios and provide a consecutive approach for their realization. But other than during the on-site TechEd events in the past years, it was not feasible to provide the Eclipse based ABAP Development Tools (ADT) and the SAP GUI to our participants in the this year's virtual version of the TechEd.
+
+Since it is a goal of this workshop to show and get the hands on the complete end-to-end implementation processes of ABAP integration with SAP Data Intelligence, all parts of this session that require these (local) applications will be presented as live Deep Dive demos, conducted in ADT and in SAP S/4HANA by the trainer, the Exercises - in opposite - are then performed by the participants in SAP Data Intelligence and will leverage those artifacts in S/4HANA that got created during the Deep Dive demos.
+
 ## Exercises
-
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
-
-- [Getting Started](exercises/ex0/)
+- [Overview and Getting Started](exercises/ex0/README.md#overview-and-getting-started)
+  - [Deep Dive demos vs. Exercises](exercises/ex0/README.md#deep-dive-vs-exercise-sections-in-this-document)
+  - [Short introduction to the Enterprise Procurement Model (EPM) in ABAP systems](exercises/ex0/README.md#short-introduction-to-the-enterprise-procurement-model-epm-in-sap-s4hana)
+  - Access to the exercises' Data Intelligence environment(**Link Placeholder**)
+- Deep Dive 1 - ABAP CDS View based data extraction in SAP Data Intelligence
+- Deep Dive 2 - Calling an ABAP function module in SAP S/4HANA from SAP Data Intelligence(**Link placeholder**)
+- Deep Dive 3- Technincal Background for Replication Flows in SAP Data Intelligence(**Link placeholder**)
+- [Overview and Getting Started](exercises/ex0/README.md#overview-and-getting-started)
 - [Exercise 1 - First Exercise Description](exercises/ex1/)
     - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
     - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
@@ -28,14 +46,8 @@ Provide the exercise content here directly in README.md using [markdown](https:/
     - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
     - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
 
-  
-**OR** Link to the Tutorial Navigator for example...
 
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
-
-**IMPORTANT**
-
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
+Here is a graphical overview about the topics and processes that we will focus on during this hands-on workshop and how they relate to each other.
 
 ## How to obtain support
 

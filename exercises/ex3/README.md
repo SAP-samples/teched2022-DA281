@@ -57,8 +57,8 @@ For the integration of ABAP CDS Views in S/4HANA, SAP Data Intelligence provides
     - Click on the left side on the left side on the field GrossAmount
     - Change the = operator to an >= from the drop-down
     -  Enter in the Value field on the ríght side the value **800**
-    ![RF Filter GrossAmount](img/RF_Filter_GrossAmount.png)
     -  Click on the **OK** Button to save the mapping for the CDS View Z_CDS_EPM_PO_XX
+    ![RF Filter GrossAmount](img/RF_Filter_GrossAmount.png)
 
 14. For the CDS View Z_CDS_EPM_SO we combine the mapping and filtering together for our replication. For the sales orders we are interested filtering for all printers within our orders. We want to also add within our replicated dataset a new column storing the exact timestamp of our replication
     - For the filtering of all printers click on the filter icon and scroll down to the column ProductCategory
