@@ -37,7 +37,7 @@ Since it is a goal of this workshop to show and get the hands on the complete en
   - Access to the exercises' Data Intelligence environment(**Link Placeholder**)
 - Deep Dive 1 - ABAP CDS View based data extraction in SAP Data Intelligence
 - Deep Dive 2 - Calling an ABAP function module in SAP S/4HANA from SAP Data Intelligence(**Link placeholder**)
-- Deep Dive 3- Technincal Background for Replication Flows in SAP Data Intelligence(**Link placeholder**)
+- Deep Dive 3- Technical Background for Replication Flows in SAP Data Intelligence(**Link placeholder**)
 - [Overview and Getting Started](exercises/ex0/README.md#overview-and-getting-started)
 - [Exercise 1 - First Exercise Description](exercises/ex1/)
     - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
