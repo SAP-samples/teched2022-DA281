@@ -5,7 +5,7 @@ Technically you can realize data replication use cases using SAP Data Intelligen
 ![](images/3-001.JPG)
 <br><br>
 
-The following generation 2 pipeline illustrates an example for a simple 1:1 replication of data from a SAP source into a file object store as a target. <br>
+The following generation 2 pipeline illustrates an example for a simple 1:1 replication of data from an SAP source into a file object store as a target. <br>
 
 ![](images/DI_Generation2_Pipeline.png)
 
@@ -16,7 +16,7 @@ Important aspects to highlight are:
 
 - Recovery of data integration pipelines in case of various error situations using resilience & snapshot functionality in generation 2 pipelines
 
-- High total cost of ownership (TCO) when having large amount of data sets (e.g. hundreds or thousands of CDS Views or tables) in a replication use case which results in creating as well as maintaining a lot of Daa Intelligence pipelines
+- High total cost of ownership (TCO) when having large amount of data sets (e.g. hundreds or thousands of CDS Views or tables) in a replication use case which results in creating as well as maintaining a lot of Data Intelligence pipelines
 
 - Limited performance scalability in pipelines, e.g. in the area of parallelizing initial as well as delta load processes
 <br><br>
@@ -30,7 +30,7 @@ Therefore, replication flows provisioned via the so called "Replication Manageme
 
 The main functionalities of Replication Flows cover:
 
-- Model data replication from a selected source to a selected target. In this case a more simplified way of realizing "mass data replication use cases" is being offerent to move data very easy from a source to a target system
+- Model data replication from a selected source to a selected target. In this case a more simplified way of realizing "mass data replication use cases" is being offered to move data very easy from a source to a target system
 
 
 - Initial focus on 1:1 replication of with simple projections and filters, e.g. adding, adjusting and removal of columns as well as ability to provide row-level filters on one or multiple columns
@@ -49,7 +49,7 @@ The main functionalities of Replication Flows cover:
 
 ### **Overview of Replication Flow Connectivity**
 
-Looking at the supported source & target connectivty, different SAP and non-SAP connectivty can currently be used when creating a Replication Flow, which can also be checked in our product documentation under the following Link.
+Looking at the supported source & target connectivity, different SAP and non-SAP connectivity can currently be used when creating a Replication Flow, which can also be checked in our product documentation under the following Link.
 
 **[Replication Flow source and target connectivity ](https://help.sap.com/docs/SAP_DATA_INTELLIGENCE/ca509b7635484070a655738be408da63/f4327d3e2f7146a19e76924f8a79454a.html)** 
 
@@ -145,7 +145,7 @@ Define the target container. In case of a database it is the database schema and
     <br>
    - Kafka
      - *Serialization type* (json, avro)
-     - *Compression* (none,gzip, snappy, lz4, zstandard)
+     - *Compression* (none, gzip, snappy, lz4, zstandard)
      - *Number of partitions* (integer number, default is 1)
      - *Replication Factor* (integer number, default is 1)
 
@@ -160,7 +160,7 @@ The below picture illustrates some of configurations available for object stores
 
 #### **Configuration settings in the Tasks tab**
 
-Once you have defined the main configurations eetings in the *Proeprties* tab, you can go to the *Tasks* tab of your Replication Flow. Inside this tab you will add the actual data sets to your Replication Flow and map it to your target data set. 
+Once you have defined the main configurations settings in the *Properties* tab, you can go to the *Tasks* tab of your Replication Flow. Inside this tab you will add the actual data sets to your Replication Flow and map it to your target data set. 
 <br>
 
 Open the *Tasks* tab <br>
@@ -174,7 +174,7 @@ For each selected data set you can perform the following configurations:
 
 - Source
 
-Represents your selected source data set and can not be changed once selected.
+Represents your selected source data set and cannot be changed once selected.
 
 - Source Filter
 
@@ -187,7 +187,7 @@ Additionally, you can remove columns that are not needed and also create additio
 
 - Target
 
-Select the target data set in which the data should be replicated. By default, the same nem from the source data set is being used, but you can also change the default name and either select a pre-defined target data set or let the Replication Flow create the target data set.
+Select the target data set in which the data should be replicated. By default, the same name from the source data set is being used, but you can also change the default name and either select a pre-defined target data set or let the Replication Flow create the target data set.
 
 - Load Type
 
@@ -204,10 +204,10 @@ A check box that allows users to clean-up the target data set, e.g. in case a us
 
 <br>
 
-Before you can run a Replication Flow, you can hite the *Validate* button in the top menu bar 
+Before you can run a Replication Flow, you can hit the *Validate* button in the top menu bar 
 ![](images/RF_Validate_Button.png)
 
-to check if all necessary configurations are specified. If this is the case, you should receive a popup indicazing that validation was successfull:
+to check if all necessary configurations are specified. If this is the case, you should receive a popup indicating that validation was successful:
 
 <br>
 
@@ -215,7 +215,7 @@ to check if all necessary configurations are specified. If this is the case, you
 
 <br>
 
-Next, you can *Deploy* the Replication flow by clikcing the deploy button in the top menu bar:
+Next, you can *Deploy* the Replication flow by clicking the deploy button in the top menu bar:
 ![](images/RF_Deploy_Button.png)
 
 <br>
@@ -230,7 +230,7 @@ Monitoring Replication Flows is embedded inside the SAP Data Intelligence Modele
 
 ![](images/DI_RF_Monitoring_App.png)
 
-The monitoring of Replication Flows is divided into two layers. In the first layer on the top of the screen shows an overview of the different Replication FLows existing in the SAP Data Intelligence Cloud tenant and in the second layer on the bottom of the screen you can find detailed information for the different Tasks for each selected Replication Flow.
+The monitoring of Replication Flows is divided into two layers. In the first layer on the top of the screen shows an overview of the different Replication Flows existing in the SAP Data Intelligence Cloud tenant and in the second layer on the bottom of the screen you can find detailed information for the different Tasks for each selected Replication Flow.
 
 <br>
 
@@ -267,7 +267,7 @@ In the second layer of the screen you can find the following information about t
 - Partitions = number of partitions defined for each Task for parallelization
 - Load Type = Load type that has been defined in the modeler application
 - Runtime updated = Timestamp indicating when last package was processed
-- Start Tiime = Start Time of the Task 
+- Start Time = Start Time of the Task 
 - Initial Load End Time = Time at which the initial load ended
 - Duration = time needed to perform the initial load
 
@@ -288,7 +288,7 @@ We will start with a first high level overview which kind of data sets & artefac
 
 <br>
 
-Now we take this overview and provide some more greanular view on the type of SAP System that can be integration with Replication Flows incl. a brief overview on the minimum version that is required. More information about the ABAP integration with SAP Data Intelligence can be found here: 
+Now we take this overview and provide some more granular view on the type of SAP System that can be integration with Replication Flows incl. a brief overview on the minimum version that is required. More information about the ABAP integration with SAP Data Intelligence can be found here: 
 **[SAP Data Intelligence ABAP Integration ](https://launchpad.support.sap.com/#/notes/2890171)**
 
 <br>
@@ -297,7 +297,7 @@ Now we take this overview and provide some more greanular view on the type of SA
 
 <br>
 
-**Important Note:** It is always recommended to check the central SAP Note mentioned above as well as the individual SAP Note we have for each SAP ABAP System for the minimum pre-requisites as well as implementing all referenced SAP notes to fix known issues, e.g.for integrating SAP S/4HANA 2021 you can check the following  Note **[SAP Data Intelligence ABAP Integration - SAP S/4HANA 2021 ](https://launchpad.support.sap.com/#/notes/3085579)**
+**Important Note:** It is always recommended to check the central SAP Note mentioned above as well as the individual SAP Note we have for each SAP ABAP System for the minimum pre-requisites as well as implementing all referenced SAP notes to fix known issues, e.g. for integrating SAP S/4HANA 2021 you can check the following  Note **[SAP Data Intelligence ABAP Integration - SAP S/4HANA 2021 ](https://launchpad.support.sap.com/#/notes/3085579)**
 and for DMIS 2018 SP07 you can check this SAP Note **[SAP Data Intelligence ABAP Integration - DMIS 2018 SP07 ](https://launchpad.support.sap.com/#/notes/2890171)**.
 
 <br>
@@ -306,7 +306,7 @@ and for DMIS 2018 SP07 you can check this SAP Note **[SAP Data Intelligence ABAP
 
 In the underlying architecture Replication Flows are executed by so called "worker graphs", which internally built based on Data intelligence pipelines, but optimized for data replication use cases to overcome the limitations we have seen in the beginning of this deep dive when using regular pipelines. <br>
 
-A worker graph is being executed in the background in case a user triggers the execution of a Replication Flow and mainly consists of the source & target connectivity + projection & mapping in case the user is defining a filter or changes the strcuture of the data set. Theoretically, there is no limit for a user to define how much data sets (also known as Tasks) can be added inside a single Replication Flow, but there are some important aspects we will highlight below that influences this decision.<br>
+A worker graph is being executed in the background in case a user triggers the execution of a Replication Flow and mainly consists of the source & target connectivity + projection & mapping in case the user is defining a filter or changes the structure of the data set. Theoretically, there is no limit for a user to define how much data sets (also known as Tasks) can be added inside a single Replication Flow, but there are some important aspects we will highlight below that influences this decision.<br>
 
 **Important Note:** A user cannot create such a Replication Flow on her/his own and should only be seen as the technical runtime artefact, which is automatically triggered when a Replication Flow is being executed. <br>
 Please check below how a worker graph looks like: <br>
