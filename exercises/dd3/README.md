@@ -5,6 +5,12 @@ Technically you can realize data replication use cases using SAP Data Intelligen
 ![](images/3-001.JPG)
 <br><br>
 
+The following generation 2 pipeline illustrates an example for a simple 1:1 replication of data from a SAP source into a file object store as a target. <br>
+
+![](images/DI_Generation2_Pipeline.png)
+
+<br>
+
 Important aspects to highlight are:
 - 1 data set replication ≙  1 pipeline in Data Intelligence with possibility to generalize pipeline execution with variables in certain scenarios
 
@@ -35,9 +41,9 @@ The main functionalities of Replication Flows cover:
 
 - Support initial load as well as delta load capabilities, which is based on trigger-based change-data-capture (CDC) using logging tables on the connected source systems
 
-- Support parallelization during initial load through partitioning
+- Support parallelization during initial load through partitioning to achieve a parallelized data load
 
-- Support resiliency functinoalities & automated recovery in case of error scenarios
+- Support resiliency functionalities & automated recovery in case of error scenarios and also during maintenance of SAP Data Intelligence Cloud
 
 <br>
 
@@ -45,7 +51,7 @@ The main functionalities of Replication Flows cover:
 
 Looking at the supported source & target connectivty, different SAP and non-SAP connectivty can currently be used when creating a Replication Flow, which can also be checked in our product documentation under the following Link.
 
-**[Replication Flow source and target connectivity ](https://blogs.sap.com/2019/12/16/https://help.sap.com/docs/SAP_DATA_INTELLIGENCE/ca509b7635484070a655738be408da63/f4327d3e2f7146a19e76924f8a79454a.html)** 
+**[Replication Flow source and target connectivity ](https://help.sap.com/docs/SAP_DATA_INTELLIGENCE/ca509b7635484070a655738be408da63/f4327d3e2f7146a19e76924f8a79454a.html)** 
 
 
 The supported source connectivity includes:
@@ -78,7 +84,7 @@ There are partially special configurations available for specific target connect
 ### **Create a Replication Flow in SAP data Intelligence Cloud** 
 This sub-chapter will provide an overview for how to create a Replication Flow including an explanation for all relevant settings a user needs to define in the different steps.
 
-You can also get additional information for a step by step in the exercise chapter of this hands-on session: **[Replication Flow Exercises](https://github.com/SAP-samples/teched2022-DA281/tree/main/exercises/ex3)**
+You can also get additional information for a step by step in the exercise chapter of this hands-on session: **[Replication Flow Exercises](../ex3/README.md)**
 
 <br>
 
@@ -86,6 +92,7 @@ You can also get additional information for a step by step in the exercise chapt
 #### **Configuration settings in the Properties tab**
 <br>
 First of all we will start inside the Modeler application in SAP Data Intelligence, where you can create a Replication Flow and provide a name:
+
 <br>
 
 ![](images/DI_RF_Name.png)
@@ -215,10 +222,10 @@ The monitoring of Replication Flows is divided into two layers. In the first lay
 In the first layer of the screen you can find the following information for each Replication Flow:
 <br>
 
-- Name of the Replication Flow
-- Defined source connection
-- Defined target connection
-- Number of data sets / tasks existing in the Replication Flow
+- Name = Name of the Replication Flow
+- Source Connection = Defined source connection
+- Target Connection = Defined target connection
+- Datasets = Number of data sets / tasks existing in the Replication Flow
 - Progress = Overall progress of initial load of all Tasks
 - Changed At = Timestamp when the Replication Flow changed the last time
 - Changed By = The user who changed the Replication Flow the last time
@@ -229,20 +236,20 @@ In the first layer of the screen you can find the following information for each
 
 ![](images/DI_Monitoring_RF.png)
 
--<br>
+<br>
 
 In the second layer of the screen you can find the following information about the Tasks once you select a Replication Flow with your mouse in the first layer:
 
-- Source data set name
-- Target data set name
-- Priority
+- Source data set = Defined source data set name
+- Target data set = Defined target data set name
+- Priority = priority of the Task
 - Last Run Status = Status of each Task (e.g. Transferring delta load)
 - Operations = row count per Task, which includes both record count for initial load as well as delta load
-- Partitions
-- Load Type = which has been defined in the modeler application
+- Partitions = number of partitions defined for each Task for parallelization
+- Load Type = Load type that has been defined in the modeler application
 - Runtime updated = Timestamp indicating when last package was processed
-- Start Time of the Task
-- Initial Load End Time
+- Start Tiime = Start Time of the Task 
+- Initial Load End Time = Time at which the initial load ended
 - Duration = time needed to perform the initial load
 
 <br>
@@ -250,7 +257,6 @@ In the second layer of the screen you can find the following information about t
 ![](images/DI_Monitoring_RF_Tasks.png)
 
 <br>
-
 
 ### **Overview of ABAP Integration with Replication Flows** 
 
@@ -303,7 +309,7 @@ The number of connections per replication flows can be figured in the monitoring
 
 ### **Important Links**
 
-**[TechEd exercises for Replication Flows](https://github.com/SAP-samples/teched2022-DA281/tree/main/exercises/ex3)**
+**[TechEd exercises for Replication Flows](../ex3/README.md)**
 <br>
 
 **[Step by Step Guide for creating a Replication Flow](https://help.sap.com/docs/SAP_DATA_INTELLIGENCE/1c1341f6911f4da5a35b191b40b426c8/d3acc43c77c848b6a82d899ff6895f99.html)**
