@@ -75,11 +75,151 @@ There are partially special configurations available for specific target connect
 
 <br>
 
+### **Create a Replication Flow in SAP data Intelligence Cloud** 
+This sub-chapter will provide an overview for how to create a Replication Flow including an explanation for all relevant settings a user needs to define in the different steps.
+
+You can also get additional information for a step by step in the exercise chapter of this hands-on session: **[Replication Flow Exercises](https://github.com/SAP-samples/teched2022-DA281/tree/main/exercises/ex3)**
+
+<br>
+
+
+#### **Configuration settings in the Properties tab**
+<br>
+First of all we will start inside the Modeler application in SAP Data Intelligence, where you can create a Replication Flow and provide a name:
+<br>
+
+![](images/DI_RF_Name.png)
+
+<br>
+
+![](images/RF_Overview.png)
+
+<br>
+
+- Description
+
+Provide an optional description for your Replication Flow, otherwise you can leave it empty.
+
+<br>
+
+- Source Connection
+
+Define your source connection from the connection management. Be aware that the list is filtered by connection types that are supported by Replication Flows as a source system. 
+
+<br>
+
+- Source Container
+
+Define the source container. In case of a database it is the database schema, but in case of ABAP it is the logical object you want to replicate (CDS (= CDS Views), SLT(tables), or ODP_SAPI / ODP_BW for ODP objects).
+
+<br>
+
+- Target Connection
+
+Define your target connection from the connection management. Be aware that the list is filtered by connection types that are supported by Replication Flows as a target system.
+
+<br>
+
+- Target Container
+
+Define the target container. In case of a database it is the database schema and in case of an object store it is target root folder in which you want to replicate the data. In case of Kafka as a target no target container is needed as we directly replicate into topics of a Kafka broker without the need of a target container.
+
+<br>
+
+- Target connection specific properties that are automatically popping up in the user interface if a certain connection is being specified. <br>
+  - Object Stores (AWS S3, GCS, Azure Data Lake Gen 2, HDL Files)
+    - *Group Delta By* (Date, Time) allowing users to define if the delta records should be automatically grouped in folders based on date or time.
+    - *File Type* (CSV, Parquet, JSON, JSONLines)
+    - *Compression* (for Parquet)
+    - *Delimiter* (for CSV)
+    - *Header Line* (for CSV)
+    - *Orient* (for JSON)
+
+    <br>
+   - Kafka
+     - *Serialization type* (json, avro)
+     - *Compression* (none,gzip, snappy, lz4, zstandard)
+     - *Number of partitions* (integer number, default is 1)
+     - *Replication Factor* (integer number, default is 1)
+
+<br>
+
+The below picture illustrates some of configurations available for object stores:
+<br>
+
+![](images/RF_Overview.png)
+
+<br>
+
+#### **Configuration settings in the Tasks tab**
+
+Once you have defined the main configurations eetings in the *Proeprties* tab, you can go to the *Tasks* tab of your Replication Flow. Inside this tab you will add the actual data sets to your Replication Flow and map it to your target data set. 
+<br>
+
+Open the *Tasks* tab <br>
+
+![](images/RF_Create_Task.png)
+
+#### **Monitoring ofReplication Flows**
+
+Monitoring Replication Flows is embedded inside the SAP Data Intelligence Modeler application. You can either use the *Go To Monitoring* button inside the Modeler application within the Replication Flow dialog or directly open the Monitoring application from the SAP Data Intelligence Launchpad:
+<br>
+
+![](images/DI_RF_Monitoring_App.png)
+
+The monitoring of Replication Flows is divided into two layers. In the first layer on the top of the screen shows an overview of the different Replication FLows existing in the SAP Data Intelligence Cloud tenant and in the second layer on the bottom of the screen you can find detailed information for the different Tasks for each selected Replication Flow.
+
+<br>
+
+![](images/DI_RF_Monitoring_Overview.png)
+
+<br>
+
+In the first layer of the screen you can find the following information for each Replication Flow:
+<br>
+
+- Name of the Replication Flow
+- Defined source connection
+- Defined target connection
+- Number of data sets / tasks existing in the Replication Flow
+- Progress = Overall progress of initial load of all Tasks
+- Changed At = Timestamp when the Replication Flow changed the last time
+- Changed By = The user who changed the Replication Flow the last time
+- Created By = User who created the Replication Flow
+- Created At = Timestamp when the Replication Flow was created
+
+<br>
+
+![](images/DI_Monitoring_RF.png)
+
+-<br>
+
+In the second layer of the screen you can find the following information about the Tasks once you select a Replication Flow with your mouse in the first layer:
+
+- Source data set name
+- Target data set name
+- Priority
+- Last Run Status = Status of each Task (e.g. Transferring delta load)
+- Operations = row count per Task, which includes both record count for initial load as well as delta load
+- Partitions
+- Load Type = which has been defined in the modeler application
+- Runtime updated = Timestamp indicating when last package was processed
+- Start Time of the Task
+- Initial Load End Time
+- Duration = time needed to perform the initial load
+
+<br>
+
+![](images/DI_Monitoring_RF_Tasks.png)
+
+-<br>
+
+
 ### **Overview of ABAP Integration with Replication Flows** 
 
-The folloowing sub-chapter describes a deep dive into the topic how a user can integrate the various types of SAP ABAP based systems as a source with Replication Flows. 
+The following sub-chapter describes a deep dive into the topic how a user can integrate the various types of SAP ABAP based systems as a source with Replication Flows. 
 
-We will tsart with a first high level overview which kind of data sets & artefacts can be integrated with each SAP ABAP system.
+We will start with a first high level overview which kind of data sets & artefacts can be integrated with each SAP ABAP system.
 <br><br>
 
 ![](images/3-007.JPG)
