@@ -147,7 +147,7 @@ Define the target container. In case of a database it is the database schema and
 The below picture illustrates some of configurations available for object stores:
 <br>
 
-![](images/RF_Overview.png)
+![](images/RF_Create_Object_Store.png)
 
 <br>
 
@@ -160,7 +160,7 @@ Open the *Tasks* tab <br>
 
 ![](images/RF_Create_Task.png)
 
-#### **Monitoring ofReplication Flows**
+#### **Monitoring of Replication Flows**
 
 Monitoring Replication Flows is embedded inside the SAP Data Intelligence Modeler application. You can either use the *Go To Monitoring* button inside the Modeler application within the Replication Flow dialog or directly open the Monitoring application from the SAP Data Intelligence Launchpad:
 <br>
