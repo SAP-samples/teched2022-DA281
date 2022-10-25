@@ -160,6 +160,43 @@ Open the *Tasks* tab <br>
 
 ![](images/RF_Create_Task.png)
 
+Click the Create button to add one or multiple data sets, e.g. a CDS View, into your Replication Flow.
+For each selected data set you can perform the following configurations:
+
+<br>
+
+- Source
+
+Represents your selected source data set and can not be changed once selected.
+
+- Source Filter
+
+Optionally you can define a filter on one or multiple columns if you do not want to load the complete source data set.
+
+- Mapping
+
+By default all columns from the source data set are being replicated to the target data set using an auto mapping with the exact same column names in the source & target data set. You can use the mapping dialog to customize the standard mapping, e.g. if the column names differ from each other.
+Additionally, you can remove columns that are not needed and also create additional columns and either map new columns to existing column of fill it with constant values or pre-defined functions (e.g. CURRENT_DATE). Please note that when browsing and selecting a pre-defined target data sets, e.g. a table in HANA Cloud, you can create additional columns.
+
+- Target
+
+Select the target data set in which the data should be replicated. By default, the same nem from the source data set is being used, but you can also change the default name and either select a pre-defined target data set or let the Replication Flow create the target data set.
+
+- Load Type
+
+Select the load type for each Task where you can select Initial  Only or Initial and Delta. Initial Only will load the data via a full load without any change data capture (CDC) or delta capabilities. Initial and Delta will perform the initial load of a data set followed by replicating all changes (inserts, updates, deletes) for this data set.
+Furthermore, the required technical artefacts on the source to initiate the delta processes are automatically being created.
+
+- Truncate
+
+A check box that allows users to clean-up the target data set, e.g. in case a user want to re-initialize the data replication with a new initial load.
+
+<br>
+
+![](images/RF_Create_Task.png)
+
+<br>
+
 #### **Monitoring of Replication Flows**
 
 Monitoring Replication Flows is embedded inside the SAP Data Intelligence Modeler application. You can either use the *Go To Monitoring* button inside the Modeler application within the Replication Flow dialog or directly open the Monitoring application from the SAP Data Intelligence Launchpad:
@@ -212,7 +249,7 @@ In the second layer of the screen you can find the following information about t
 
 ![](images/DI_Monitoring_RF_Tasks.png)
 
--<br>
+<br>
 
 
 ### **Overview of ABAP Integration with Replication Flows** 
