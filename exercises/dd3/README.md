@@ -204,6 +204,25 @@ A check box that allows users to clean-up the target data set, e.g. in case a us
 
 <br>
 
+Before you can run a Replication Flow, you can hite the *Validate* button in the top menu bar 
+![](images/RF_Validate_Button.png)
+
+to check if all necessary configurations are specified. If this is the case, you should receive a popup indicazing that validation was successfull:
+
+<br>
+
+![](images/RF_Validation_Check.png)
+
+<br>
+
+Next, you can *Deploy* the Replication flow by clikcing the deploy button in the top menu bar:
+![](images/RF_Deploy_Button.png)
+
+<br>
+
+The deployment process will make sure that the necessary run-time artefacts are being generated before you can finally start a Replication Flow by clicking the *run* button.
+
+
 #### **Monitoring of Replication Flows**
 
 Monitoring Replication Flows is embedded inside the SAP Data Intelligence Modeler application. You can either use the *Go To Monitoring* button inside the Modeler application within the Replication Flow dialog or directly open the Monitoring application from the SAP Data Intelligence Launchpad:
