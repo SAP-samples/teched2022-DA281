@@ -81,19 +81,19 @@ There are partially special configurations available for specific target connect
 
 <br>
 
-### **Create a Replication Flow in SAP data Intelligence Cloud** 
+### **Create a Replication Flow in SAP Data Intelligence Cloud** 
 This sub-chapter will provide an overview for how to create a Replication Flow including an explanation for all relevant settings a user needs to define in the different steps.
 
 You can also get additional information for a step by step in the exercise chapter of this hands-on session: **[Replication Flow Exercises](../ex3/README.md)**
 
 <br>
 
-
 #### **Configuration settings in the Properties tab**
 <br>
 First of all we will start inside the Modeler application in SAP Data Intelligence, where you can create a Replication Flow and provide a name:
 
 <br>
+
 
 ![](images/DI_RF_Name.png)
 
