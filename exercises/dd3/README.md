@@ -92,8 +92,7 @@ You can also get additional information for a step by step in the exercise chapt
 <br>
 First of all we will start inside the Modeler application in SAP Data Intelligence, where you can create a Replication Flow and provide a name:
 
-<br>
-
+<br><br>
 
 ![](images/DI_RF_Name.png)
 
