@@ -85,7 +85,6 @@ There are partially special configurations available for specific target connect
 This sub-chapter will provide an overview for how to create a Replication Flow including an explanation for all relevant settings a user needs to define in the different steps.
 
 You can also get additional information for a step by step in the exercise chapter of this hands-on session: **[Replication Flow Exercises](../ex3/README.md)**
-
 <br>
 
 #### **Configuration settings in the Properties tab**
