@@ -92,7 +92,7 @@ You can also get additional information for a step by step in the exercise chapt
 <br>
 First of all we will start inside the Modeler application in SAP Data Intelligence, where you can create a Replication Flow and provide a name:
 
-<br><br>
+<br>
 
 ![](images/DI_RF_Name.png)
 
@@ -102,31 +102,31 @@ First of all we will start inside the Modeler application in SAP Data Intelligen
 
 <br>
 
-- Description
+- *Description*
 
 Provide an optional description for your Replication Flow, otherwise you can leave it empty.
 
 <br>
 
-- Source Connection
+- *Source Connection*
 
 Define your source connection from the connection management. Be aware that the list is filtered by connection types that are supported by Replication Flows as a source system. 
 
 <br>
 
-- Source Container
+- *Source Container*
 
 Define the source container. In case of a database it is the database schema, but in case of ABAP it is the logical object you want to replicate (CDS (= CDS Views), SLT(tables), or ODP_SAPI / ODP_BW for ODP objects).
 
 <br>
 
-- Target Connection
+- *Target Connection*
 
 Define your target connection from the connection management. Be aware that the list is filtered by connection types that are supported by Replication Flows as a target system.
 
 <br>
 
-- Target Container
+- *Target Container*
 
 Define the target container. In case of a database it is the database schema and in case of an object store it is target root folder in which you want to replicate the data. In case of Kafka as a target no target container is needed as we directly replicate into topics of a Kafka broker without the need of a target container.
 
@@ -171,29 +171,29 @@ For each selected data set you can perform the following configurations:
 
 <br>
 
-- Source
+- *Source*
 
 Represents your selected source data set and cannot be changed once selected.
 
-- Source Filter
+- *Source Filter*
 
 Optionally you can define a filter on one or multiple columns if you do not want to load the complete source data set.
 
-- Mapping
+- *Mapping*
 
 By default all columns from the source data set are being replicated to the target data set using an auto mapping with the exact same column names in the source & target data set. You can use the mapping dialog to customize the standard mapping, e.g. if the column names differ from each other.
 Additionally, you can remove columns that are not needed and also create additional columns and either map new columns to existing column of fill it with constant values or pre-defined functions (e.g. CURRENT_DATE). Please note that when browsing and selecting a pre-defined target data sets, e.g. a table in HANA Cloud, you can create additional columns.
 
-- Target
+- *Target*
 
 Select the target data set in which the data should be replicated. By default, the same name from the source data set is being used, but you can also change the default name and either select a pre-defined target data set or let the Replication Flow create the target data set.
 
-- Load Type
+- *Load Type*
 
 Select the load type for each Task where you can select Initial  Only or Initial and Delta. Initial Only will load the data via a full load without any change data capture (CDC) or delta capabilities. Initial and Delta will perform the initial load of a data set followed by replicating all changes (inserts, updates, deletes) for this data set.
 Furthermore, the required technical artefacts on the source to initiate the delta processes are automatically being created.
 
-- Truncate
+- *Truncate*
 
 A check box that allows users to clean-up the target data set, e.g. in case a user want to re-initialize the data replication with a new initial load.
 
@@ -219,7 +219,8 @@ Next, you can *Deploy* the Replication flow by clicking the deploy button in the
 
 <br>
 
-The deployment process will make sure that the necessary run-time artefacts are being generated before you can finally start a Replication Flow by clicking the *run* button.
+The deployment process will make sure that the necessary run-time artefacts are being generated before you can finally start a Replication Flow by clicking the *Run* button:
+![](images/RF_Run_Button.png)
 
 
 #### **Monitoring of Replication Flows**
@@ -240,15 +241,15 @@ The monitoring of Replication Flows is divided into two layers. In the first lay
 In the first layer of the screen you can find the following information for each Replication Flow:
 <br>
 
-- Name = Name of the Replication Flow
-- Source Connection = Defined source connection
-- Target Connection = Defined target connection
-- Datasets = Number of data sets / tasks existing in the Replication Flow
-- Progress = Overall progress of initial load of all Tasks
-- Changed At = Timestamp when the Replication Flow changed the last time
-- Changed By = The user who changed the Replication Flow the last time
-- Created By = User who created the Replication Flow
-- Created At = Timestamp when the Replication Flow was created
+- *Name* = Name of the Replication Flow
+- *Source Connection* = Defined source connection
+- *Target Connection* = Defined target connection
+- *Datasets* = Number of data sets / tasks existing in the Replication Flow
+- *Progress* = Overall progress of initial load of all Tasks
+- *Changed At* = Timestamp when the Replication Flow changed the last time
+- *Changed By* = The user who changed the Replication Flow the last time
+- *Created By* = User who created the Replication Flow
+- *Created At* = Timestamp when the Replication Flow was created
 
 <br>
 
@@ -258,17 +259,17 @@ In the first layer of the screen you can find the following information for each
 
 In the second layer of the screen you can find the following information about the Tasks once you select a Replication Flow with your mouse in the first layer:
 
-- Source data set = Defined source data set name
-- Target data set = Defined target data set name
-- Priority = priority of the Task
-- Last Run Status = Status of each Task (e.g. Transferring delta load)
-- Operations = row count per Task, which includes both record count for initial load as well as delta load
-- Partitions = number of partitions defined for each Task for parallelization
-- Load Type = Load type that has been defined in the modeler application
-- Runtime updated = Timestamp indicating when last package was processed
-- Start Time = Start Time of the Task 
-- Initial Load End Time = Time at which the initial load ended
-- Duration = time needed to perform the initial load
+- *Source data set* = Defined source data set name
+- *Target data set* = Defined target data set name
+- *Priority* = priority of the Task
+- *Last Run Status* = Status of each Task (e.g. Transferring delta load)
+- *Operations* = row count per Task, which includes both record count for initial load as well as delta load
+- *Partitions* = number of partitions defined for each Task for parallelization
+- *Load Type* = Load type that has been defined in the modeler application
+- *Runtime updated* = Timestamp indicating when last package was processed
+- *Start Time* = Start Time of the Task 
+- *Initial Load End Time* = Time at which the initial load ended
+- *Duration* = time needed to perform the initial load
 
 <br>
 
