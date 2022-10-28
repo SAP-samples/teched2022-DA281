@@ -13,11 +13,8 @@ The following generation 2 pipeline illustrates an example for a simple 1:1 repl
 
 Important aspects to highlight are:
 - 1 data set replication ≙  1 pipeline in Data Intelligence with possibility to generalize pipeline execution with variables in certain scenarios.
-
 - Recovery of data integration pipelines in case of various error situations using resilience & snapshot functionality in generation 2 pipelines.
-
 - High total cost of ownership (TCO) when having large amount of data sets (e.g. hundreds or thousands of CDS Views or tables) in a replication use case which results in creating as well as maintaining a lot of Data Intelligence pipelines.
-
 - Limited performance scalability in pipelines, e.g. in the area of parallelizing initial as well as delta load processes.
 <br><br>
 
@@ -31,18 +28,11 @@ Therefore, replication flows provisioned via the so called "Replication Manageme
 The main functionalities of Replication Flows cover:
 
 - Model data replication from a selected source to a selected target. In this case a more simplified way of realizing "mass data replication use cases" is being offered to move data very easy from a source to a target system.
-
-
 - Initial focus on 1:1 replication of with simple projections and filters, e.g. adding, adjusting and removal of columns as well as ability to provide row-level filters on one or multiple.
-
 - Dedicated user interface for modeling mass data replication via a new interface that is embedded in the existing modeler application and optimized for mass data replication scenarios to offer a simplified user experience.
-
 - Lower total cost of ownership (TCO) and total development costs (TDC) for customers realizing mass data replication scenarios in SAP Data Intelligence Cloud compared to using pipelines for such use cases.
-
 - Support initial load as well as delta load capabilities, which is based on trigger-based change-data-capture (CDC) using logging tables on the connected source systems.
-
 - Support parallelization during initial load through partitioning to achieve a parallelized data load.
-
 - Support resiliency functionalities & automated recovery in case of error scenarios and also during maintenance of SAP Data Intelligence Cloud.
 
 <br>
@@ -55,7 +45,6 @@ Looking at the supported source & target connectivity, different SAP and non-SAP
 
 
 The supported source connectivity includes:
-
 - SAP S/4HANA Cloud
 - SAP S/4HANA on-Premise
 - SAP Business Suite & SAP S/4HANA Foundation via SLT
@@ -63,7 +52,6 @@ The supported source connectivity includes:
 - Azure MS SQL
 
 The supported target connectivity includes:
-
 - SAP HANA Cloud
 - SAP HANA Data Lake Files (HDL-Files)
 - Amazon S3
@@ -91,8 +79,6 @@ You can also get additional information for a step by step in the exercise chapt
 <br>
 First of all we will start inside the Modeler application in SAP Data Intelligence Cloud, where you can create a Replication Flow and provide a name:
 
-<br>
-
 ![](images/DI_RF_Name.png)
 
 <br>
@@ -103,49 +89,49 @@ First of all we will start inside the Modeler application in SAP Data Intelligen
 
 - *Description*
 
-Provide an optional description for your Replication Flow, otherwise you can leave it empty.
+  Provide an optional description for your Replication Flow, otherwise you can leave it empty.
 
 <br>
 
 - *Source Connection*
 
-Define your source connection from the connection management. Be aware that the list is filtered by connection types that are supported by Replication Flows as a source system. 
+  Define your source connection from the connection management. Be aware that the list is filtered by connection types that are supported by Replication Flows as a source system. 
 
 <br>
 
 - *Source Container*
 
-Define the source container. In case of a database it is the database schema, but in case of ABAP it is the logical object you want to replicate (CDS (= CDS Views), SLT(tables), or ODP_SAPI / ODP_BW for ODP objects).
+  Define the source container. In case of a database it is the database schema, but in case of ABAP it is the logical object you want to replicate (CDS (= CDS Views), SLT(tables), or ODP_SAPI / ODP_BW for ODP objects).
 
 <br>
 
 - *Target Connection*
 
-Define your target connection from the connection management. Be aware that the list is filtered by connection types that are supported by Replication Flows as a target system.
+  Define your target connection from the connection management. Be aware that the list is filtered by connection types that are supported by Replication Flows as a target system.
 
 <br>
 
 - *Target Container*
 
-Define the target container. In case of a database, it is the database schema and in case of an object store it is target root folder in which you want to replicate the data. In case of Kafka as a target, no target container is needed as we directly replicate into topics of a Kafka broker without the need of a target container.
+  Define the target container. In case of a database, it is the database schema and in case of an object store it is target root folder in which you want to replicate the data. In case of Kafka as a target, no target container is needed as we directly replicate into topics of a Kafka broker without the need of a target container.
 
 <br>
 
 - Target connection specific properties that are automatically popping up in the user interface if a certain connection is being specified. <br>
   - Object Stores (AWS S3, GCS, Azure Data Lake Gen 2, HDL Files)
-    - *Group Delta By* (Date, Time) allowing users to define if the delta records should be automatically grouped in folders based on date or time.
-    - *File Type* (CSV, Parquet, JSON, JSONLines)
-    - *Compression* (for Parquet)
-    - *Delimiter* (for CSV)
-    - *Header Line* (for CSV)
-    - *Orient* (for JSON)
+    - **Group Delta By** (Date, Time) allowing users to define if the delta records should be automatically grouped in folders based on date or time.
+    - **File Type** (CSV, Parquet, JSON, JSONLines)
+    - **Compression** (for Parquet)
+    - **Delimiter** (for CSV)
+    - **Header Line** (for CSV)
+    - **Orient** (for JSON)
 
     <br>
    - Kafka
-     - *Serialization type* (json, avro)
-     - *Compression* (none, gzip, snappy, lz4, zstandard)
-     - *Number of partitions* (integer number, default is 1)
-     - *Replication Factor* (integer number, default is 1)
+     - **Serialization type** (json, avro)
+     - **Compression** (none, gzip, snappy, lz4, zstandard)
+     - **Number of partitions** (integer number, default is 1)
+     - **Replication Factor** (integer number, default is 1)
 
 <br>
 
@@ -153,8 +139,6 @@ The below picture illustrates some of configurations available for object store 
 <br>
 
 ![](images/RF_Create_Object_Store.png)
-
-<br>
 
 #### **Configuration settings in the Tasks tab**
 
@@ -168,57 +152,44 @@ Open the *Tasks* tab <br>
 Click the Create button to add one or multiple data sets, e.g. a CDS View, into your Replication Flow.
 For each selected data set you can perform the following configurations:
 
-<br>
+- **Source**
 
-- *Source*
+  Represents your selected source data set and cannot be changed once selected.
 
-Represents your selected source data set and cannot be changed once selected.
+- **Source Filter**
 
-- *Source Filter*
+  Optionally you can define a filter on one or multiple columns if you do not want to load the complete source data set.
 
-Optionally you can define a filter on one or multiple columns if you do not want to load the complete source data set.
+- **Mapping**
 
-- *Mapping*
+  By default all columns from the source data set are being replicated to the target data set using an auto mapping with the exact same column names in the source & target data set. You can use the mapping dialog to customize the standard mapping, e.g. if the column names differ from each other.
+  Additionally, you can remove columns that are not needed and also create additional columns and either map new columns to existing column of fill it with constant values or pre-defined functions (e.g. CURRENT_DATE). Please note that when browsing and selecting a pre-defined target data sets, e.g. a table in HANA Cloud, you can create additional columns.
 
-By default all columns from the source data set are being replicated to the target data set using an auto mapping with the exact same column names in the source & target data set. You can use the mapping dialog to customize the standard mapping, e.g. if the column names differ from each other.
-Additionally, you can remove columns that are not needed and also create additional columns and either map new columns to existing column of fill it with constant values or pre-defined functions (e.g. CURRENT_DATE). Please note that when browsing and selecting a pre-defined target data sets, e.g. a table in HANA Cloud, you can create additional columns.
+- **Target**
 
-- *Target*
+  Select the target data set in which the data should be replicated. By default, the same name from the source data set is being used, but you can also change the default name and either select a pre-defined target data set or let the Replication Flow create the target data set.
 
-Select the target data set in which the data should be replicated. By default, the same name from the source data set is being used, but you can also change the default name and either select a pre-defined target data set or let the Replication Flow create the target data set.
+- **Load Type**
 
-- *Load Type*
+  Select the load type for each Task where you can select Initial  Only or Initial and Delta. Initial Only will load the data via a full load without any change data capture (CDC) or delta capabilities. Initial and Delta will perform the initial load of a data set followed by replicating all changes (inserts, updates, deletes) for this data set.
+  Furthermore, the required technical artefacts on the source to initiate the delta processes are automatically being created.
 
-Select the load type for each Task where you can select Initial  Only or Initial and Delta. Initial Only will load the data via a full load without any change data capture (CDC) or delta capabilities. Initial and Delta will perform the initial load of a data set followed by replicating all changes (inserts, updates, deletes) for this data set.
-Furthermore, the required technical artefacts on the source to initiate the delta processes are automatically being created.
+- **Truncate**
 
-- *Truncate*
+  A check box that allows users to clean-up the target data set, e.g. in case a user want to re-initialize the data replication with a new initial load.
 
-A check box that allows users to clean-up the target data set, e.g. in case a user want to re-initialize the data replication with a new initial load.
-
-<br>
 
 ![](images/RF_Create_Task.png)
 
-<br>
-
-Before you can run a Replication Flow, you can hit the *Validate* button in the top menu bar 
-![](images/RF_Validate_Button.png)
-
-to check if all necessary configurations are specified. If this is the case, you should receive a popup indicating that validation was successful:
-
-<br>
+Before you can run a Replication Flow, you can hit the **Validate** button in the top menu bar 
+![](images/RF_Validate_Button.png) to check if all necessary configurations are specified. If this is the case, you should receive a popup indicating that validation was successful:
 
 ![](images/RF_Validation_Check.png)
 
-<br>
-
-Next, you can *Deploy* the Replication Flow by clicking the deploy button in the top menu bar:
+Next, you can **Deploy** the Replication Flow by clicking the deploy button in the top menu bar:
 ![](images/RF_Deploy_Button.png)
 
-<br>
-
-The deployment process will make sure that the necessary run-time artefacts are being generated before you can finally start a Replication Flow by clicking the *Run* button:
+The deployment process will make sure that the necessary run-time artefacts are being generated before you can finally start a Replication Flow by clicking the **Run** button:
 ![](images/RF_Run_Button.png)
 
 
@@ -240,15 +211,15 @@ The monitoring of Replication Flows is divided into two layers. In the first lay
 In the first layer of the screen you can find the following information for each Replication Flow:
 <br>
 
-- *Name* = Name of the Replication Flow
-- *Source Connection* = Defined source connection
-- *Target Connection* = Defined target connection
-- *Datasets* = Number of data sets / tasks existing in the Replication Flow
-- *Progress* = Overall progress of initial load of all Tasks
-- *Changed At* = Timestamp when the Replication Flow changed the last time
-- *Changed By* = The user who changed the Replication Flow the last time
-- *Created By* = User who created the Replication Flow
-- *Created At* = Timestamp when the Replication Flow was created
+- **Name** = Name of the Replication Flow
+- **Source Connection** = Defined source connection
+- **Target Connection** = Defined target connection
+- **Datasets** = Number of data sets / tasks existing in the Replication Flow
+- **Progress** = Overall progress of initial load of all Tasks
+- **Changed At** = Timestamp when the Replication Flow changed the last time
+- **Changed By** = The user who changed the Replication Flow the last time
+- **Created By** = User who created the Replication Flow
+- **Created At** = Timestamp when the Replication Flow was created
 
 <br>
 
@@ -258,17 +229,17 @@ In the first layer of the screen you can find the following information for each
 
 In the second layer of the screen you can find the following information about the Tasks once you select a Replication Flow with your mouse in the first layer:
 
-- *Source data set* = Defined source data set name
-- *Target data set* = Defined target data set name
-- *Priority* = priority of the Task
-- *Last Run Status* = Status of each Task (e.g. Transferring delta load)
-- *Operations* = row count per Task, which includes both record count for initial load as well as delta load
-- *Partitions* = number of partitions defined for each Task for parallelization
-- *Load Type* = Load type that has been defined in the modeler application
-- *Runtime updated* = Timestamp indicating when last package was processed
-- *Start Time* = Start Time of the Task 
-- *Initial Load End Time* = Time at which the initial load ended
-- *Duration* = time needed to perform the initial load
+- **Source data set** = Defined source data set name
+- **Target data set** = Defined target data set name
+- **Priority** = priority of the Task
+- **Last Run Status** = Status of each Task (e.g. Transferring delta load)
+- **Operations** = row count per Task, which includes both record count for initial load as well as delta load
+- **Partitions** = number of partitions defined for each Task for parallelization
+- **Load Type** = Load type that has been defined in the modeler application
+- **Runtime updated** = Timestamp indicating when last package was processed
+- **Start Time** = Start Time of the Task 
+- **Initial Load End Time** = Time at which the initial load ended
+- **Duration** = time needed to perform the initial load
 
 <br>
 
@@ -296,7 +267,7 @@ Now we take this overview and provide some more granular view on the type of SAP
 
 <br>
 
-**Important Note:** It is always recommended to check the central SAP Note mentioned above as well as the individual SAP Note we have for each SAP ABAP System for the minimum pre-requisites as well as implementing all referenced SAP notes to fix known issues, e.g. for integrating SAP S/4HANA 2021 you can check the following  Note **[SAP Data Intelligence ABAP Integration - SAP S/4HANA 2021 ](https://launchpad.support.sap.com/#/notes/3085579)**
+**Important Note:** It is always recommended to check the central SAP Note mentioned above as well as the individual SAP Note we have for each SAP ABAP System for the minimum pre-requisites as well as implementing all referenced SAP notes to fix known issues, e.g. for integrating SAP S/4HANA 2021 you can check the following Note **[SAP Data Intelligence ABAP Integration - SAP S/4HANA 2021 ](https://launchpad.support.sap.com/#/notes/3085579)**
 and for DMIS 2018 SP07 you can check this SAP Note **[SAP Data Intelligence ABAP Integration - DMIS 2018 SP07 ](https://launchpad.support.sap.com/#/notes/2890171)**.
 
 <br>

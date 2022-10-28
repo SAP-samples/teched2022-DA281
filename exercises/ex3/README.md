@@ -1,7 +1,9 @@
-## Exercise x.x - Integrate ABAP CDS Views in SAP Data Intelligence Replication Management Flow
+## Exercise 3 - Integrate ABAP CDS Views in SAP Data Intelligence Replication Management Flow
 For the integration of ABAP CDS Views in S/4HANA, SAP Data Intelligence provides standard ABAP operator shells that can easily be configured according to your use cases. In principal, you can leverage the following approach:
 
-**``Important: Replace the subfix XX within this exercise with your user ID of this exercise session.``**
+> **Important**:
+> 
+> Replace the subfix XX within this exercise with your user ID of this exercise session.
 
 1. Logon to SAP Data Intelligence to access the Launchpad application and click on the Modeler tile.
 

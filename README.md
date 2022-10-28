@@ -2,8 +2,7 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2022 session called DA281 - Hands-On Session for SAP Data Intelligence: Connectivity and Integration. 
-TEst 
+This repository contains the material for the SAP TechEd 2022 session called DA281 - Hands-On Session for SAP Data Intelligence: Connectivity and Integration.
 
 ## Overview
 
@@ -36,9 +35,9 @@ Since it is a goal of this workshop to show and get the hands on the complete en
   - [Deep Dive demos vs. Exercises](exercises/ex0/README.md#deep-dive-vs-exercise-sections-in-this-document)
   - [Short introduction to the Enterprise Procurement Model (EPM) in ABAP systems](exercises/ex0/README.md#short-introduction-to-the-enterprise-procurement-model-epm-in-sap-s4hana)
   - Access to the exercises' Data Intelligence environment(**Link Placeholder**)
-- Deep Dive 1 - ABAP CDS View based data extraction in SAP Data Intelligence
+- [Deep Dive 1 - ABAP CDS View based data extraction in SAP Data Intelligence](exercises/dd1/README.md#deep-dive-1---abap-cds-view-based-data-extraction-in-sap-data-intelligence)
 - Deep Dive 2 - Calling an ABAP function module in SAP S/4HANA from SAP Data Intelligence(**Link placeholder**)
-- Deep Dive 3- Technical Background for Replication Flows in SAP Data Intelligence(**Link placeholder**)
+- [Deep Dive 3- Technical Background for Replication Flows in SAP Data Intelligence](exercises/dd3/README.md)
 - [Overview and Getting Started](exercises/ex0/README.md#overview-and-getting-started)
 - [Exercise 1 - First Exercise Description](exercises/ex1/)
     - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
