@@ -46,6 +46,7 @@ Since it is a goal of this workshop to show and get the hands on the complete en
     - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
     - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
 
+- [Exercise 3 - Integrate ABAP CDS Views in SAP Data Intelligence Replication Management Flow](exercises/ex3/README.md#exercise-3---integrate-abap-cds-views-in-sap-data-intelligence-replication-management-flow)
 
 Here is a graphical overview about the topics and processes that we will focus on during this hands-on workshop and how they relate to each other.
 

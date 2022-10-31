@@ -1,6 +1,6 @@
 # Deep Dive 3 - Replicating data using Replication Flows in SAP Data Intelligence Cloud
 
-Technically you can realize data replication use cases using SAP Data Intelligence Cloud pipelines, but there are also some important considerations and limitations to mention when using pipelines for such a scenario.<br><br>
+When replicating data from one source system to a target system often only minor structural changes are needed for the replication. Technically you can realize data replication use cases using SAP Data Intelligence Cloud pipelines, but there are also some important considerations and limitations to mention when using pipelines for such a scenario.<br><br>
 
 ![](images/3-001.JPG)
 <br><br>
@@ -8,8 +8,6 @@ Technically you can realize data replication use cases using SAP Data Intelligen
 The following generation 2 pipeline illustrates an example for a simple 1:1 replication of data from an SAP source into a file object store as a target. <br>
 
 ![](images/DI_Generation2_Pipeline.png)
-
-<br>
 
 Important aspects to highlight are:
 - 1 data set replication ≙  1 pipeline in Data Intelligence with possibility to generalize pipeline execution with variables in certain scenarios.
@@ -20,7 +18,7 @@ Important aspects to highlight are:
 
 ### **Overview of Replication Flow core functionality**
 
-Therefore, replication flows provisioned via the so called "Replication Management Service (RMS)" have been made available to simplify the realization of data replication use cases in SAP Data Intelligence Cloud. Whereas RMS includes the whole data replication service incl. its dependent components, a "Replication Flow" is the name of the artefact that a user is creating & maintaining inside the SAP Data Intelligence Cloud Modeler application. The main capabilities and functional foundation are visualized in the following illustration:
+Therefore, replication flows provisioned via the so called "Replication Management Service (RMS)" have been made available to simplify the realization of data replication use cases in SAP Data Intelligence Cloud. Whereas RMS includes the whole data replication service incl. its dependent components, a "Replication Flow" is the name of the artefact that a user creates & maintaines inside the SAP Data Intelligence Cloud Modeler application. The main capabilities and functional foundation are visualized in the following illustration:
 <br><br>
 ![](images/3-002.JPG)
 <br>
