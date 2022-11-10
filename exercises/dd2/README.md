@@ -32,7 +32,7 @@ Netweaver >= 7.52 (ECC, BW, SRM, ...) | Add-On DMIS 2018 SP02 + Note 2845347 | L
 Netweaver >= 7.00 & < 7.52 (ECC, BW, SRM, ...) | Add-On DMIS 2011 SP17 + Note 2857333 or 2857334 | Latest DMIS 2011 SP
 Netweaver >= 4.6C & < 7.00 via dedicated SLT Server | Add-On DMIS 2011/2018 considering DMIS [version dependency](https://help.sap.com/doc/7824ad784dd242928fade9b62cdb171c/3.0.04/en-US/Installation_Guide_2020.pdf) | Use latest DMIS SP
 > **Note:**
-> Please always also consult the most up-to-date Availability Matrix.
+> Please always also consult the most up-to-date Product Availability Matrix (PAM).
 
 ![](images/dd2-001b.JPG)
 
