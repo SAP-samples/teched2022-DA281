@@ -2,7 +2,7 @@
 
 In this section we will demonstrate how to create a custom ABAP operator in SAP S/4HANA and trigger its execution from a Pipeline in SAP Data Intelligence.<br><br>
 The ABAP operator that we will be implementing provides a feature which is needed by some of the other Deep Dive sessions and Exercises of this workshop when it comes to extracting and replicating delta information from an ABAP source system. We will realize functionality for triggering the execution of an ABAP program in the source system that generates Sales Order data for the Enterprise Procurement Model (EPM).<br>
-The operator can then be used in this workshop to 'remote control' the creation of EPM Sales Order records from SAP Data Intelligence pipelines without having the need to logon to the S/4HANA. Hence, we can leverage the Custom ABAP operator to demonstrate and verify the delta provisioning capabilities of the CDS Reader and the Replication Flows.<br><br>
+The operator can then be used in this workshop to 'remote control' the creation of EPM Sales Order records from SAP Data Intelligence pipelines without having the need to logon to the SAP GUI of S/4HANA. We can leverage the Custom ABAP operator to demonstrate and verify the delta provisioning capabilities of the CDS Reader and the Replication Flows.<br><br>
 
 ## Implementation of Custom ABAP Operators
 The ABAP operators are developed in the S/4HANA system as regular development objects, hence, they can be transported within the system landscape.<br>
