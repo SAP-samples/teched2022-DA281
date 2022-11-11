@@ -268,9 +268,10 @@ ENDCLASS.
 <br>
 
 ***Save*** the local class and activate (![](/exercises/dd2/images/Activate.jpg)) your ABAP Operator implementations.<br>
+![](/exercises/dd2/images/dd2-014d.jpg)<br><br>
 
 15. When you clicked the Activation button, you are prompted for a selection of objects. Check both and confirm (![](images/Confirm_black.JPG)).<br><br>
-![](/exercises/dd2/images/dd2-015b.JPG)<br><br>
+    ![](/exercises/dd2/images/dd2-015b.jpg)<br><br>
 
 The ABAP Operator implementation is now finished. The operator can immediately be used in SAP Data Intelligence Pipeline. The next section of this Deep Dive demo describes how this is done.<br><br>
 
