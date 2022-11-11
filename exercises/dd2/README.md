@@ -168,6 +168,8 @@ Include the following lines after the `step( )` method:
     DATA lv_data TYPE string.
     mo_in->read_copy( IMPORTING ea_data = lv_data ).
 
+    "Execute the report variant of the EPM Data Generation report
+    "that creates one Sales Order Header and related Sales Order items
     SUBMIT SEPM_DG_EPM_STD_CHANNEL USING SELECTION-SET 'Z_EPM_GEN_SO_1' AND RETURN.
     lv_data = '--> One additional EPM Sales Order with five related Sales Order Items created.'.
 
@@ -252,6 +254,8 @@ CLASS lcl_process IMPLEMENTATION.
     DATA lv_data TYPE string.
     mo_in->read_copy( IMPORTING ea_data = lv_data ).
 
+    "Execute the report variant of the EPM Data Generation report
+    "that creates one Sales Order Header and related Sales Order items
     SUBMIT SEPM_DG_EPM_STD_CHANNEL USING SELECTION-SET 'Z_EPM_GEN_SO_1' AND RETURN.
     lv_data = '--> One additional EPM Sales Order with five related Sales Order Items created.'.
 
