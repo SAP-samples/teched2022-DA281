@@ -159,21 +159,21 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
        ENDIF.
      ENDMETHOD.
      ```
-     <br>
-    If `has_data( )` returns true, i.e. if the ABAP Operator receives a signal from the corresponding Data Intelligence Pipeline operator, we call the `on_data( )` method, which contains the wanted functionality (receive the record count based on a given table or CDS View).<br>
-    Include the following lines after the `step( )` method:
-    
-    ```abap
-      METHOD on_data.
-        DATA lv_data TYPE string.
-        mo_in->read_copy( IMPORTING ea_data = lv_data ).
-    
-        SUBMIT SEPM_DG_EPM_STD_CHANNEL USING SELECTION-SET 'Z_EPM_GEN_SO_1' AND RETURN.
-        lv_data = '--> One additional EPM Sales Order with five related Sales Order Items created.'.
-    
-        mo_out->write_copy( lv_data ).
-      ENDMETHOD.
-    ```
+
+If `has_data( )` returns true, i.e. if the ABAP Operator receives a signal from the corresponding Data Intelligence Pipeline operator, we call the `on_data( )` method, which contains the wanted functionality (receive the record count based on a given table or CDS View).<br>
+Include the following lines after the `step( )` method:
+
+```abap
+  METHOD on_data.
+    DATA lv_data TYPE string.
+    mo_in->read_copy( IMPORTING ea_data = lv_data ).
+
+    SUBMIT SEPM_DG_EPM_STD_CHANNEL USING SELECTION-SET 'Z_EPM_GEN_SO_1' AND RETURN.
+    lv_data = '--> One additional EPM Sales Order with five related Sales Order Items created.'.
+
+    mo_out->write_copy( lv_data ).
+  ENDMETHOD.
+```
 
 We can outcomment the parameter value retrieval (see line 30 in screenshot below)<br><br>
 ![](/exercises/dd2/images/dd2-014c.jpg)<br><br>
