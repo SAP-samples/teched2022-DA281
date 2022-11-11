@@ -38,17 +38,17 @@ Since it is a goal of this workshop to show and get the hands on the complete en
 - [Deep Dive 1 - ABAP CDS View based data extraction in SAP Data Intelligence](exercises/dd1/README.md#deep-dive-1---abap-cds-view-based-data-extraction-in-sap-data-intelligence)
 - [Deep Dive 2 - Creating a Custom ABAP Operator and making use of it in an SAP Data Intelligence Pipeline](exercises/dd2/README.md)
 - [Deep Dive 3- Technical Background for Replication Flows in SAP Data Intelligence](exercises/dd3/README.md)
+
 - [Overview and Getting Started](exercises/ex0/README.md#overview-and-getting-started)
+
 - [Exercise 1 - Replicating data from S/4HANA ABAP CDS Views in SAP Data Intelligence](exercises/ex1/)
     - [Exercise 1.1 - Consume the EPM Business Partner ABAP CDS Views in SAP Data Intelligence](exercises/ex1#exercise-11-sub-exercise-1-description)
     - [Exercise 1.2 - Extend the Pipeline to transfer the Customer data into a HANA Cloud Database with Initial Load mode](exercises/ex1#exercise-12-sub-exercise-2-description)
     - [Exercise 1.3 - Implement a Pipeline for delta transfer of enhanced EPM Sales Order data from S/4HANA to an S3 Object Store]()
     - [Exercise 1.4 - Extend the Pipeline for joining Sales Order with Customer data for each change in Sales Orders and persist results in S3]()
-- [Exercise 2 - Triggering the execution of a function module in a remote S/4HANA system](exercises/ex2/)
-    - [Exercise 2.1 - Making custom ABAP Operators available in SAP Data Intelligence](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Using a custom ABAP Operator to verify your Delta Replication of EPM Sales Orders](exercises/ex2#exercise-22-sub-exercise-2-description)
+    - [Exercise 1.5 - Using a custom ABAP Operator to verify your Delta Replication of EPM Sales Orders]()
 
-- [Exercise 3 - Integrate ABAP CDS Views in SAP Data Intelligence Replication Management Flow](exercises/ex3/README.md#exercise-3---integrate-abap-cds-views-in-sap-data-intelligence-replication-management-flow)
+- [Exercise 2 - Integrate ABAP CDS Views in SAP Data Intelligence Replication Management Flow](exercises/ex3/README.md#exercise-3---integrate-abap-cds-views-in-sap-data-intelligence-replication-management-flow)
 
 Here is a graphical overview about the topics and processes that we will focus on during this hands-on workshop and how they relate to each other.
 
