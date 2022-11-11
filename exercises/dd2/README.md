@@ -80,10 +80,10 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
    **Alternatively**, you can also directly open the underlying ABAP report by running transaction SE38 (ABAP Editor), entering `DHAPE_CREATE_OPER_BADI_IMPL`, and ***Execute*** (![](/exercises/dd2/images/Execute.jpg) or ***F8***) this report.<br><br>
 
 6. Enter the required parameters and ***Execute*** (![](/exercises/dd2/images/Execute.jpeg)).<br><br>
-![](/exercises/dd2/images/dd2-007a.JPG)<br>
+![](/exercises/dd2/images/dd2-007a.jpg)<br>
 
 7. Now assign a package or choose 'Local Object', then ***Save*** (![](/exercises/dd2/images/Save.JPG)).<br><br>
-![](/exercises/dd2/images/dd2-008a.JPG)<br>
+![](/exercises/dd2/images/dd2-008a.jpg)<br>
 
 8. On the next screen (Enhancement Implementation), click on ***Implementing Class*** on the left side, then double click on the name of your Implementing Class, in this case `ZCL_DHAPE_GET_RECORD_COUNT`.<br><br>
 ![](/exercises/dd2/images/dd2-009b.JPG)<br>
