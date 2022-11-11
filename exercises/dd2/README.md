@@ -60,7 +60,7 @@ After running these two reports, the generated implementation class can be adapt
 Here is a step-by-step guideline for creating a custom ABAP Operator. In the specific use case below, the ABAP Operator in S/4HANA should receive a input table or CDS View name and send back the record count of the given object to the Pipeline ABAP Operator in Data Intelligence.
 
 1. Logon to the SAP GUI of your conneted S/4HANA system and run transaction `DHAPE` (SAP Data Intelligence - Operator Workbench). Then click on the button ***Generate Class***.<br><br>
-![](exercises/dd2/images/dd2-002a.jpg)<br>
+![](/exercises/dd2/images/dd2-002a.jpg)<br>
 
    Alternatively, you can directly run transaction SE38 (ABAP Editor) and enter DHAPE_CREATE_OPERATOR_CLASS and ***Execute*** (![](images/Execute.JPG) or ***F8***) this report.<br><br>
    ![](images/dd2-002b.JPG)<br>
