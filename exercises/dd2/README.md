@@ -63,21 +63,21 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
 ![](/exercises/dd2/images/dd2-002a.jpg)<br>
 
    Alternatively, you can directly run transaction SE38 (ABAP Editor) and enter DHAPE_CREATE_OPERATOR_CLASS and ***Execute*** (![](/exercises/dd2/images/Execute.JPG) or ***F8***) this report.<br><br>
-   ![](/exercises/dd2/images/dd2-002b.JPG)<br>
+   ![](/exercises/dd2/images/dd2-002b.jpg)<br>
 
 2. Enter the required parameters and ***Execute***.<br><br>
-![](/exercises/dd2/images/dd2-003a.JPG)<br>
+![](/exercises/dd2/images/dd2-003a.jpg)<br>
 
 3. Now assign a package or choose 'Local Object', then ***Save*** (![](/exercises/dd2/images/Save.JPG)).<br><br>
-![](/exercises/dd2/images/dd2-004a.JPG)<br>
+![](/exercises/dd2/images/dd2-004a.jpg)<br>
 
 4. You should now see the following screen. Close that windows by clicking ***Exit*** (or ***Shift+F3***).<br><br>
 ![](/exercises/dd2/images/dd2-005a.JPG)<br>
 
 5. Go back to transaction `DHAPE` and click on “Operator BaDI Implementation Generator” <br><br>
-![](/exercises/dd2/images/dd2-006a.JPG)<br>
+![](/exercises/dd2/images/dd2-006a.jpg)<br>
 
-   Alternatively, you can directly run transaction SE38 (ABAP Editor) and enter DHAPE_CREATE_OPER_BADI_IMPL and ***Execute*** (![](/exercises/dd2/images/Execute.JPG) or ***F8***) this report.<br><br>
+   Alternatively, you can directly run transaction SE38 (ABAP Editor) and enter DHAPE_CREATE_OPER_BADI_IMPL and ***Execute*** (![](/exercises/dd2/images/Execute.jpg) or ***F8***) this report.<br><br>
 
 6. Enter the required parameters and ***Execute*** (![](images/Execute.jpeg)).<br><br>
 ![](/exercises/dd2/images/dd2-007a.JPG)<br>
