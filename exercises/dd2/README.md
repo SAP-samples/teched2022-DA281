@@ -160,7 +160,9 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
      ENDMETHOD.
     ```
 <br>
-If `has_data( )` returns true, i.e. if the ABAP Operator receives a signal from the corresponding Data Intelligence Pipeline operator, we call the `on_data( )` method, which contains the wanted functionality (receive the record count based on a given table or CDS View). Include the following lines after the `step( )` method:
+   If `has_data( )` returns true, i.e. if the ABAP Operator receives a signal from the corresponding Data Intelligence Pipeline operator, we call the `on_data( )` method, which contains the wanted functionality (receive the record count based on a given table or CDS View).<br>
+   Include the following lines after the `step( )` method:
+
 ```abap
   METHOD on_data.
     DATA:
