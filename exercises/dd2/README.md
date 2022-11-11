@@ -89,11 +89,11 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
 8. On the next screen (Enhancement Implementation), double-click on ***Implementing Class*** on the left side, then double-click on the name of your Implementing Class, in this case `ZCL_DHAPE_OPER_GEN_EPM_SO`.<br><br>
    ![](/exercises/dd2/images/dd2-009b.jpg)<br>
 
-9. This opens the Class Builder (`SE24`). Double click on the `GET_INFO` method in order to assign the input and output ports of the ABAP Operator. Parameters are not needed in our use case.<br><br>
-   ![](/exercises/dd2/images/dd2-010b.JPG)<br>
+9. This opens the Class Builder (`SE24`). Double click on the `GET_INFO` method. This method determines the 'look and feel' of the operator in a Data Intelligence pipeline, hence, the input and output ports, or which fields are displayed in the configuration panel of the operator. We will just need to assign the input and output ports of the ABAP Operator. Configuration parameters are not needed in our use case. To keep it simple, we will also not assign any documentation to the operator.<br><br>
+   ![](/exercises/dd2/images/dd2-010b.jpg)<br>
 
 10. In the method `GET_INFO`, open to the `Change`view ***(Ctrl+F1)***<br>
-    Since we don't need configuration parameters (properties), the related line in the NEW_PROCESS method can be commented out. The rest can be left as is.<br>
+    Since we don't need configuration parameters (properties), the related line in the NEW_PROCESS method can be commented out (using a double-quote character). The rest can be left as is.<br>
     The code should then look as follows:<br>
    
     ```abap
