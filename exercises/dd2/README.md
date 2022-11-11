@@ -113,22 +113,22 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
         ).
       ENDMETHOD.
     ```
-    Click the ***Save*** button.<br><br>
+    Then click the ***Save*** button.<br><br>
     ![](/exercises/dd2/images/dd2-011b.jpg)<br><br>
 
-11. Go back and double click on the `NEW_PROCESS` method in order to implement the wanted functionality for our ABAP Operator.<br><br>
+11. Go back to the Class Builder and double-click on the `NEW_PROCESS` method in order to implement the wanted functionality for our ABAP Operator.<br><br>
     ![](/exercises/dd2/images/dd2-012b.jpg)<br>
 
 12. On the next screen, double click on the local class `lcl_process`.<br><br>
-![](/exercises/dd2/images/dd2-013b.jpg)<br>
+    ![](/exercises/dd2/images/dd2-013b.jpg)<br>
 
 13. As we are going to implement a new method `on_data`, we have to declare the method in the class definition.<br><br>
-Open the `Change`view ***(icon or Ctrl+F1)*** and add the following code snippet:<br>
-```abap
-  PRIVATE SECTION.
-  METHODS: on_data.
-```
-![](/exercises/dd2/images/dd2-014b.JPG)<br><br>
+    Open the `Change`view ***(icon or Ctrl+F1)*** and add the following code snippet:<br>
+    ```abap
+      PRIVATE SECTION.
+      METHODS: on_data.
+    ```
+    ![](/exercises/dd2/images/dd2-014b.jpg)<br><br>
 
 14.  Overwrite the existing `step( )` method with the following code:<br>
 
