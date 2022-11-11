@@ -14,7 +14,7 @@ After a new ABAP Operator has been created, it can immediately be used in the SA
 There are two variants of this operator type available in SAP Data Intelligence:
 1. SAP ABAP Operator: This can be used with any ABAP operator delivered by SAP (in namespace `com.sap`). Examples for out-of-the-box operators are (the already known) ABAP CDS Reader, ODP Reader, SLT Connector, Cluster Table Splitter (for Business Suite systems), and the ABAP Converter. 
 2. Custom ABAP Operator: This can be used with any ABAP operator created by customers (in namespace `customer.<xyz>`).<br><br>
-![](images/dd2-001a.JPG)
+![](/exercises/dd2/images/dd2-001a.JPG)
 
 In order to use the ABAP Subengine, the following prerequisites have to be met:
 1. A supported ABAP system is available (see table below)
@@ -34,7 +34,7 @@ Netweaver >= 4.6C & < 7.00 via dedicated SLT Server | Add-On DMIS 2011/2018 cons
 > **Note:**
 > Please always also consult the most up-to-date Product Availability Matrix (PAM).
 
-![](images/dd2-001b.JPG)
+![](/exercises/dd2/images/dd2-001b.JPG)
 
 <br>ABAP Operators are created in the ABAP System by implementing the BAdI: `BADI_DHAPE_ENGINE_OPERATOR`.<br>
 The BAdI implementation consists of a class with **two methods** that must be redefined. It is recommended that the BAdI implementation extends the abstract class
@@ -62,11 +62,11 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
 1. Logon to the SAP GUI of your conneted S/4HANA system and run transaction `DHAPE` (SAP Data Intelligence - Operator Workbench). Then click on the button ***Generate Class***.<br><br>
 ![](/exercises/dd2/images/dd2-002a.jpg)<br>
 
-   Alternatively, you can directly run transaction SE38 (ABAP Editor) and enter DHAPE_CREATE_OPERATOR_CLASS and ***Execute*** (![](images/Execute.JPG) or ***F8***) this report.<br><br>
-   ![](images/dd2-002b.JPG)<br>
+   Alternatively, you can directly run transaction SE38 (ABAP Editor) and enter DHAPE_CREATE_OPERATOR_CLASS and ***Execute*** (![](/exercises/dd2/images/Execute.JPG) or ***F8***) this report.<br><br>
+   ![](/exercises/dd2/images/dd2-002b.JPG)<br>
 
 2. Enter the required parameters and ***Execute***.<br><br>
-![](images/dd2-003a.JPG)<br>
+![](/exercises/dd2/images/dd2-003a.JPG)<br>
 
 3. Now assign a package or choose 'Local Object', then ***Save*** (![](images/Save.JPG)).<br><br>
 ![](images/dd2-004a.JPG)<br>
