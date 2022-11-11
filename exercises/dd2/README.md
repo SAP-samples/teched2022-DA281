@@ -91,10 +91,31 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
 9. This opens the Class Builder (`SE24`). Double click on the `GET_INFO` method in order to assign the input and output ports of the ABAP Operator. Parameters are not needed in our use case.<br><br>
 ![](/exercises/dd2/images/dd2-010b.JPG)<br>
 
-10. In the method `GET_INFO`, open to the `Change`view ***(Ctrl+F1)*** and outcomment the three lines which specify the parameters (parameters are not needed in this scenario). The rest can be left as is. Click the ***Save*** button.<br><br>
+10. In the method `GET_INFO`, open to the `Change`view ***(Ctrl+F1)*** and outcomment the three lines which specify the parameters (parameters are not needed in this scenario). The rest can be left as is.<br>
+Since we don't need configuration parameters, the related line in the NEW_PROCESS method can be commented out. The code should then look as follows:<br>
+```abap
+  METHOD IF_DHAPE_GRAPH_OPERATOR~GET_INFO.
+    rs_info = VALUE #(
+      name         = 'customer.teched.socreate'
+      description  = 'Creation of EPM Sales Order'(DSC)
+      extensible   = abap_false
+      component    = 'com.sap.abap.base'
+      documentid   = 'ZCL_DHAPE_OPER_GEN_EPM_SO'
+      iconsrc      = '../base/SAP_ABAP_Logo.png'
+      internal     = abap_false
+      subengine    = 'v6'
+      inports      = VALUE #( ( name = 'in'  type = 'string' ) )
+      outports     = VALUE #( ( name = 'out' type = 'string' ) )
+      "properties   = VALUE #( ( name = 'myparameter' type = 'string' ) )
+    ).
+  ENDMETHOD.
+```
+<br>
+Click the ***Save*** button.<br><br>
 ![](/exercises/dd2/images/dd2-011b.JPG)<br>
 
 11. Go back and double click on the `NEW_PROCESS` method in order to implement the wanted functionality for our ABAP Operator.<br><br>
+
 ![](/exercises/dd2/images/dd2-012b.JPG)<br>
 
 12. On the next screen, double click on the local class `lcl_process`.<br><br>
