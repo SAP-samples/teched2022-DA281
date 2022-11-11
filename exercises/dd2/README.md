@@ -72,7 +72,7 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
 ![](/exercises/dd2/images/dd2-004a.jpg)<br>
 
 4. You should now see the following screen. Close that windows by clicking ***Exit*** (or ***Shift+F3***).<br><br>
-![](/exercises/dd2/images/dd2-005a.JPG)<br>
+![](/exercises/dd2/images/dd2-005a.jpg)<br>
 
 5. Go back to transaction `DHAPE` and click on “Operator BaDI Implementation Generator” <br><br>
 ![](/exercises/dd2/images/dd2-006a.jpg)<br>
