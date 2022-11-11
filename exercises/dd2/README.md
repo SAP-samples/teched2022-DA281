@@ -60,36 +60,37 @@ After running these two reports, the generated implementation class can be adapt
 Here is a step-by-step guideline for creating a custom ABAP Operator. In the specific use case below, the ABAP Operator in S/4HANA should receive a input table or CDS View name and send back the record count of the given object to the Pipeline ABAP Operator in Data Intelligence.
 
 1. Logon to the SAP GUI of your conneted S/4HANA system and run transaction `DHAPE` (SAP Data Intelligence - Operator Workbench). Then click on the button ***Generate Class***.<br><br>
-![](/exercises/dd2/images/dd2-002a.jpg)<br>
+   ![](/exercises/dd2/images/dd2-002a.jpg)<br>
 
    **Alternatively**, you can also directly open the underlying ABAP report by running transaction SE38 (ABAP Editor) and entering DHAPE_CREATE_OPERATOR_CLASS. Then just ***Execute*** (![](/exercises/dd2/images/Execute.jpg) or ***F8***) this report.<br><br>
    ![](/exercises/dd2/images/dd2-002b.jpg)<br>
 
 2. Enter the required parameters and ***Execute***.<br><br>
-![](/exercises/dd2/images/dd2-003a.jpg)<br>
+   ![](/exercises/dd2/images/dd2-003a.jpg)<br>
 
 3. Now assign a package or choose 'Local Object', then ***Save*** (![](/exercises/dd2/images/Save.JPG)).<br><br>
-![](/exercises/dd2/images/dd2-004a.jpg)<br>
+   ![](/exercises/dd2/images/dd2-004a.jpg)<br>
 
 4. You should now see the following screen. Close that windows by clicking ***Exit*** (or ***Shift+F3***).<br><br>
-![](/exercises/dd2/images/dd2-005a.jpg)<br>
+   ![](/exercises/dd2/images/dd2-005a.jpg)<br>
 
 5. You are now back on the SAP Data Intelligence Operator Workbench (transaction `DHAPE`). Click on “Generate BAdI Implementation”<br><br>
-![](/exercises/dd2/images/dd2-006a.jpg)<br>
+   ![](/exercises/dd2/images/dd2-006a.jpg)<br>
 
    **Alternatively**, you can also directly open the underlying ABAP report by running transaction SE38 (ABAP Editor), entering `DHAPE_CREATE_OPER_BADI_IMPL`, and ***Execute*** (![](/exercises/dd2/images/Execute.jpg) or ***F8***) this report.<br><br>
 
 6. Enter the required parameters and ***Execute*** (![](/exercises/dd2/images/Execute.jpeg)).<br><br>
-![](/exercises/dd2/images/dd2-007a.jpg)<br>
+   ![](/exercises/dd2/images/dd2-007a.jpg)<br>
 
-7. Now assign a package or choose 'Local Object', then ***Save*** (![](/exercises/dd2/images/Save.jpg)).<br><br>
-![](/exercises/dd2/images/dd2-008a.jpg)<br>
+7. Now assign a package and ***Save*** (![](/exercises/dd2/images/Save.jpg)), or click 'Local Object'.<br>
+   The Enhancement Implementation tool then starts, as you can see in the status line. This may take a couple of seconds.<br><br>
+   ![](/exercises/dd2/images/dd2-008a.jpg)<br>
 
-8. On the next screen (Enhancement Implementation), click on ***Implementing Class*** on the left side, then double click on the name of your Implementing Class, in this case `ZCL_DHAPE_GET_RECORD_COUNT`.<br><br>
-![](/exercises/dd2/images/dd2-009b.JPG)<br>
+8. On the next screen (Enhancement Implementation), double-click on ***Implementing Class*** on the left side, then double-click on the name of your Implementing Class, in this case `ZCL_DHAPE_OPER_GEN_EPM_SO`.<br><br>
+   ![](/exercises/dd2/images/dd2-009b.JPG)<br>
 
 9. This opens the Class Builder (`SE24`). Double click on the `GET_INFO` method in order to assign the input and output ports of the ABAP Operator. Parameters are not needed in our use case.<br><br>
-![](/exercises/dd2/images/dd2-010b.JPG)<br>
+   ![](/exercises/dd2/images/dd2-010b.JPG)<br>
 
 10. In the method `GET_INFO`, open to the `Change`view ***(Ctrl+F1)***<br>
     Since we don't need configuration parameters (properties), the related line in the NEW_PROCESS method can be commented out. The rest can be left as is.<br>
