@@ -180,6 +180,7 @@ We can outcomment the parameter value retrieval (see line 30 in screenshot below
 Now click the ***Save*** button.<br><br>
 The complete code of the local class `lcl_process` should now look as follows:
 <br>
+
 ```abap
 CLASS lcl_process DEFINITION INHERITING FROM cl_dhape_graph_proc_abstract.
 
@@ -258,6 +259,7 @@ CLASS lcl_process IMPLEMENTATION.
 
 ENDCLASS.
 ```
+
 <br>
 ***Save*** the local class and activate (![](/exercises/dd2/images/Activate.jpg)) your ABAP Operator implementations.<br><br>
 
