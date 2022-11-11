@@ -87,7 +87,7 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
    ![](/exercises/dd2/images/dd2-008a.jpg)<br>
 
 8. On the next screen (Enhancement Implementation), double-click on ***Implementing Class*** on the left side, then double-click on the name of your Implementing Class, in this case `ZCL_DHAPE_OPER_GEN_EPM_SO`.<br><br>
-   ![](/exercises/dd2/images/dd2-009b.JPG)<br>
+   ![](/exercises/dd2/images/dd2-009b.jpg)<br>
 
 9. This opens the Class Builder (`SE24`). Double click on the `GET_INFO` method in order to assign the input and output ports of the ABAP Operator. Parameters are not needed in our use case.<br><br>
    ![](/exercises/dd2/images/dd2-010b.JPG)<br>
