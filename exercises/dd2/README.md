@@ -113,9 +113,8 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
         ).
       ENDMETHOD.
     ```
-    <br>
-Click the ***Save*** button.<br>
-![](/exercises/dd2/images/dd2-011b.jpg)<br><br>
+    Click the ***Save*** button.<br><br>
+    ![](/exercises/dd2/images/dd2-011b.jpg)<br><br>
 
 11. Go back and double click on the `NEW_PROCESS` method in order to implement the wanted functionality for our ABAP Operator.<br><br>
     ![](/exercises/dd2/images/dd2-012b.jpg)<br>
