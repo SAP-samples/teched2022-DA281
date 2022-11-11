@@ -92,7 +92,7 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
 9. This opens the Class Builder (`SE24`). Double click on the `GET_INFO` method. This method determines the 'look and feel' of the operator in a Data Intelligence pipeline, hence, the input and output ports, or which fields are displayed in the configuration panel of the operator. We will just need to assign the input and output ports of the ABAP Operator. Configuration parameters are not needed in our use case. To keep it simple, we will also not assign any documentation to the operator.<br><br>
    ![](/exercises/dd2/images/dd2-010b.jpg)<br>
 
-10. In the method `GET_INFO`, open to the `Change`view ***(Ctrl+F1)***<br>
+10. In the method `GET_INFO`, open to the `Change`view ***(icon or Ctrl+F1)***<br>
     Since we don't need configuration parameters (properties), the related line in the NEW_PROCESS method can be commented out (using a double-quote character). The rest can be left as is.<br>
     The code should then look as follows:<br>
    
@@ -114,18 +114,18 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
       ENDMETHOD.
     ```
     <br>
-    Click the ***Save*** button.<br><br>
-    ![](/exercises/dd2/images/dd2-011b.jpg)<br>
+    Click the ***Save*** button.<br>
+    ![](/exercises/dd2/images/dd2-011b.jpg)<br><br>
 
 11. Go back and double click on the `NEW_PROCESS` method in order to implement the wanted functionality for our ABAP Operator.<br><br>
 
-![](/exercises/dd2/images/dd2-012b.JPG)<br>
+![](/exercises/dd2/images/dd2-012b.jpg)<br>
 
 12. On the next screen, double click on the local class `lcl_process`.<br><br>
-![](/exercises/dd2/images/dd2-013b.JPG)<br>
+![](/exercises/dd2/images/dd2-013b.jpg)<br>
 
 13. As we are going to implement a new method `on_data`, we have to declare the method in the class definition.<br><br>
-Open the `Change`view ***(Ctrl+F1)*** and add the following code snippet:<br>
+Open the `Change`view ***(icon or Ctrl+F1)*** and add the following code snippet:<br>
 ```abap
   PRIVATE SECTION.
   METHODS: on_data.
