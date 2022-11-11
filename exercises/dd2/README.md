@@ -68,37 +68,37 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
 2. Enter the required parameters and ***Execute***.<br><br>
 ![](/exercises/dd2/images/dd2-003a.JPG)<br>
 
-3. Now assign a package or choose 'Local Object', then ***Save*** (![](images/Save.JPG)).<br><br>
-![](images/dd2-004a.JPG)<br>
+3. Now assign a package or choose 'Local Object', then ***Save*** (![](/exercises/dd2/images/Save.JPG)).<br><br>
+![](/exercises/dd2/images/dd2-004a.JPG)<br>
 
 4. You should now see the following screen. Close that windows by clicking ***Exit*** (or ***Shift+F3***).<br><br>
-![](images/dd2-005a.JPG)<br>
+![](/exercises/dd2/images/dd2-005a.JPG)<br>
 
 5. Go back to transaction `DHAPE` and click on “Operator BaDI Implementation Generator” <br><br>
-![](images/dd2-006a.JPG)<br>
+![](/exercises/dd2/images/dd2-006a.JPG)<br>
 
-   Alternatively, you can directly run transaction SE38 (ABAP Editor) and enter DHAPE_CREATE_OPER_BADI_IMPL and ***Execute*** (![](images/Execute.JPG) or ***F8***) this report.<br><br>
+   Alternatively, you can directly run transaction SE38 (ABAP Editor) and enter DHAPE_CREATE_OPER_BADI_IMPL and ***Execute*** (![](/exercises/dd2/images/Execute.JPG) or ***F8***) this report.<br><br>
 
 6. Enter the required parameters and ***Execute*** (![](images/Execute.jpeg)).<br><br>
-![](images/dd2-007a.JPG)<br>
+![](/exercises/dd2/images/dd2-007a.JPG)<br>
 
 7. Now assign a package or choose 'Local Object', then ***Save*** (![](images/Save.JPG)).<br><br>
-![](images/dd2-008a.JPG)<br>
+![](/exercises/dd2/images/dd2-008a.JPG)<br>
 
 8. On the next screen (Enhancement Implementation), click on ***Implementing Class*** on the left side, then double click on the name of your Implementing Class, in this case `ZCL_DHAPE_GET_RECORD_COUNT`.<br><br>
-![](images/dd2-009b.JPG)<br>
+![](/exercises/dd2/images/dd2-009b.JPG)<br>
 
 9. This opens the Class Builder (`SE24`). Double click on the `GET_INFO` method in order to assign the input and output ports of the ABAP Operator. Parameters are not needed in our use case.<br><br>
-![](images/dd2-010b.JPG)<br>
+![](/exercises/dd2/images/dd2-010b.JPG)<br>
 
 10. In the method `GET_INFO`, open to the `Change`view ***(Ctrl+F1)*** and outcomment the three lines which specify the parameters (parameters are not needed in this scenario). The rest can be left as is. Click the ***Save*** button.<br><br>
-![](images/dd2-011b.JPG)<br>
+![](/exercises/dd2/images/dd2-011b.JPG)<br>
 
 11. Go back and double click on the `NEW_PROCESS` method in order to implement the wanted functionality for our ABAP Operator.<br><br>
-![](images/dd2-012b.JPG)<br>
+![](/exercises/dd2/images/dd2-012b.JPG)<br>
 
 12. On the next screen, double click on the local class `lcl_process`.<br><br>
-![](images/dd2-013b.JPG)<br>
+![](/exercises/dd2/images/dd2-013b.JPG)<br>
 
 13. As we are going to implement a new method `on_data`, we have to declare the method in the class definition.<br><br>
 Open the `Change`view ***(Ctrl+F1)*** and add the following code snippet:<br>
@@ -106,7 +106,7 @@ Open the `Change`view ***(Ctrl+F1)*** and add the following code snippet:<br>
   PRIVATE SECTION.
   METHODS: on_data.
 ```
-![](images/dd2-014b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-014b.JPG)<br><br>
 
 14.  Overwrite the existing `step( )` method with the following code:<br>
 
@@ -160,7 +160,7 @@ Open the `Change`view ***(Ctrl+F1)*** and add the following code snippet:<br>
   ENDMETHOD.
 ```
 <br> We can outcomment the parameter value retrieval (see line 30 in screenshot below)<br><br>
-![](images/dd2-014c.JPG)<br><br>
+![](/exercises/dd2/images/dd2-014c.JPG)<br><br>
 
 Now click the ***Save*** button.<br><br>
 
@@ -253,10 +253,10 @@ CLASS lcl_process IMPLEMENTATION.
 
 ENDCLASS.
 ```
-<br>***Save*** the local class and activate (![](images/Activate.JPG)) your ABAP Operator implementations.<br><br>
+<br>***Save*** the local class and activate (![](/exercises/dd2/images/Activate.JPG)) your ABAP Operator implementations.<br><br>
 
 15. When you clicked the Activation button, you are prompted for a selection of objects. Check both and confirm (![](images/Confirm_black.JPG)).<br><br>
-![](images/dd2-015b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-015b.JPG)<br><br>
 
 The ABAP Operator implementation is now finished. The operator can immediately be used in SAP Data Intelligence Pipeline. The next section of this Deep Dive demo describes how this is done.<br><br>
 
@@ -268,37 +268,37 @@ Technically, the approaches for calling function modules in S/4HANA are the same
 The integration of ABAP Operators is done via Pipelines in the SAP Data Inteligence Modeler.
 
 1.	Logon to SAP Data Intelligence to access the Launchpad application and click on the ***Modeler*** tile.<br><br>
-![](images/dd2-016b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-016b.JPG)<br><br>
 
 2.	In the DI Modeler, make sure you are in the ***Graphs*** tab (see left side) and click the ***+*** symbol and select **Use Generation 1 Operators** in order to create a new Pipeline.<br><br>
-![](images/dd2-029b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-029b.JPG)<br><br>
 
 3.	A new Pipeline canvas opens and the design focus automatically changes to the ***Operators*** tab (see left side). Drag the ***Custom ABAP Operator*** icon from the Operator list and drop it onto the canvas. Then do one click on the ***Custom ABAP Operator*** node in the canvas and open the configuration panel by clicking on the related symbol.<br><br>
-![](images/dd2-018b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-018b.JPG)<br><br>
 
 4.	In the configuration panel on the right side, select the ***ABAP Connection*** (RFC or Websocket RFC connection) to the SAP S/4HANA system that provides the ABAP Operator. If done, click on the selection button of the field for the ***ABAP Operator***.<br><br>
-![](images/dd2-019b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-019b.JPG)<br><br>
 
 5.	From the pop-up window, select the custom ABAP Operator that you want to call from the Pipeline. In our case, it's the ABAP Operator that receives a table or CDS View name, provides the number of records for this particular table or CDS View, and sends it back to the client. Hence, choose ***Operator Class: Record Count*** and click ***OK***<br><br>
-![](images/dd2-020b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-020b.JPG)<br><br>
 
 6.	As you can see, the ABAP Operator node in the Pipeline canvas gets automatically updated with the operator's name in S/4HANA and the ports that we have defined in the previous section of this Deep Dive demo. (The `GET_INFO( )`method in our operator's ABAP class provides the corresponding meta information.)<br><br>
-![](images/dd2-021b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-021b.JPG)<br><br>
 
 7.	For verifying the functionality of the ABAP Operator call, we'll be using a ***Terminal*** Operator in the Pipeline. This operator allows the sending of user inputs and the reception of the results. Drag the ***Terminal*** icon from the Operator list and drop it onto the Pipeline canvas. Then connect<br><br>
 - the output port of the ABAP Operator with the input port of the Terminal Operator and
 - the output port of the Terminal Operator with the input port of the ABAP Operator.
 Then ***Save*** the Pipeline.<br><br>
-![](images/dd2-022b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-022b.JPG)<br><br>
 
 8.	For saving the Pipeline, you are prompted for the name of the pipeline (including namespace information), a description, and the category under which the Pipeline can be found in the ***Graphs*** tab of the Modeler. Fill in the needed and click ***OK***.<br><br>
-![](images/dd2-023b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-023b.JPG)<br><br>
 
 9.	The Pipeline now gets validated by SAP Data Intelligence. You can see the results in the ***Validation*** tab of the status section in the Modeler UI. If okay, you can now start the Pipeline by clicking on the ***Play*** symbol in the menue bar.<br><br>
-![](images/dd2-025b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-025b.JPG)<br><br>
 
 10.	Change back to the ***Status*** tab of the status section in the Modeler UI. Once the status has turned to ***running***, click one time on the ***Terminal*** node and open the Terminal UI with a click on the corresponding icon.<br><br>
-![](images/dd2-026b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-026b.JPG)<br><br>
 
 11.	In the lower section of the Terminal UI, you can now enter a name of a table or CDS View as input (after the SDH prompt) that shall be send to the ABAP Operator in S/4HANA. After each input press ***Return***. As a response from our custom ABAP Operator, you should now receive the number of records in the specified table / CDS View in the upper section of the Terminal UI, what proves the functionality and integration success.<br><br>
 You can try out the following tables and CDS Views:
@@ -313,10 +313,10 @@ You can try out the following tables and CDS Views:
 	- I_LISTEDSUBSTANCEDEFNAMESAP
 	- I_GLACCOUNTINCOMPANYCODE
 
-  ![](images/dd2-027b.JPG)<br><br>
+  ![](/exercises/dd2/images/dd2-027b.JPG)<br><br>
 	
 12.	Don't forget to stop the Pipeline again if you haven't embedded a ***Graph Terminator*** before.<br><br>
-![](images/dd2-028b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-028b.JPG)<br><br>
 
 ## Summary
 
