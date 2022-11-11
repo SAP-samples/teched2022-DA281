@@ -158,14 +158,14 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
          ENDIF.
        ENDIF.
      ENDMETHOD.
-    ```
-<br>
-   If `has_data( )` returns true, i.e. if the ABAP Operator receives a signal from the corresponding Data Intelligence Pipeline operator, we call the `on_data( )` method, which contains the wanted functionality (receive the record count based on a given table or CDS View).<br>
-   Include the following lines after the `step( )` method:
-
-```abap
-  METHOD on_data.
-    DATA:
+     ```
+   <br>
+    If `has_data( )` returns true, i.e. if the ABAP Operator receives a signal from the corresponding Data Intelligence Pipeline operator, we call the `on_data( )` method, which contains the wanted functionality (receive the record count based on a given table or CDS View).<br>
+    Include the following lines after the `step( )` method:
+   
+    ```abap
+   METHOD on_data.
+      DATA:
       lv_data TYPE TABNAME,
       lv_error TYPE string,
       lv_result TYPE SY-DBCNT .
@@ -183,32 +183,33 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
 
     mo_out->write_copy( lv_result ).
   ENDMETHOD.
-```
-<br> We can outcomment the parameter value retrieval (see line 30 in screenshot below)<br><br>
-![](/exercises/dd2/images/dd2-014c.JPG)<br><br>
+  ```
+  <br>
+  We can outcomment the parameter value retrieval (see line 30 in screenshot below)<br><br>
+  ![](/exercises/dd2/images/dd2-014c.JPG)<br><br>
+  
+  Now click the ***Save*** button.<br><br>
+  
+  The complete code of the local class `lcl_process` should now look as follows:
+  
+  ```abap
+  CLASS lcl_process DEFINITION INHERITING FROM cl_dhape_graph_proc_abstract.
 
-Now click the ***Save*** button.<br><br>
+    PUBLIC SECTION.
+      METHODS: if_dhape_graph_process~on_start  REDEFINITION.
+      METHODS: if_dhape_graph_process~on_resume REDEFINITION.
+      METHODS: if_dhape_graph_process~step      REDEFINITION.
 
-The complete code of the local class `lcl_process` should now look as follows:
+    PRIVATE SECTION.
+      METHODS: on_data.
 
-```abap
-CLASS lcl_process DEFINITION INHERITING FROM cl_dhape_graph_proc_abstract.
+      DATA:
+        mo_util         TYPE REF TO cl_dhape_util_factory,
+        mo_in           TYPE REF TO if_dhape_graph_channel_reader,
+        mo_out          TYPE REF TO if_dhape_graph_channel_writer,
+        mv_myparameter  TYPE string.
 
-  PUBLIC SECTION.
-    METHODS: if_dhape_graph_process~on_start  REDEFINITION.
-    METHODS: if_dhape_graph_process~on_resume REDEFINITION.
-    METHODS: if_dhape_graph_process~step      REDEFINITION.
-
-  PRIVATE SECTION.
-    METHODS: on_data.
-
-    DATA:
-      mo_util         TYPE REF TO cl_dhape_util_factory,
-      mo_in           TYPE REF TO if_dhape_graph_channel_reader,
-      mo_out          TYPE REF TO if_dhape_graph_channel_writer,
-      mv_myparameter  TYPE string.
-
-ENDCLASS.
+  ENDCLASS.
 
 CLASS lcl_process IMPLEMENTATION.
 
