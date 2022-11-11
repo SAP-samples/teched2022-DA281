@@ -267,7 +267,7 @@ ENDCLASS.
 
 <br>
 
-***Save*** the local class and activate (![](/exercises/dd2/images/Activate.jpg)) your ABAP Operator implementations.<br><br>
+***Save*** the local class and activate (![](/exercises/dd2/images/Activate.jpg)) your ABAP Operator implementations.<br>
 
 15. When you clicked the Activation button, you are prompted for a selection of objects. Check both and confirm (![](images/Confirm_black.JPG)).<br><br>
 ![](/exercises/dd2/images/dd2-015b.JPG)<br><br>
