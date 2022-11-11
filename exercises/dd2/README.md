@@ -131,37 +131,36 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
     ![](/exercises/dd2/images/dd2-014b.jpg)<br><br>
 
 14.  Overwrite the existing `step( )` method with the following code:<br>
+     ```abap
+     METHOD if_dhape_graph_process~step.
+       rv_progress = abap_false.
+       CHECK mv_alive = abap_true.
 
-```abap
-  METHOD if_dhape_graph_process~step.
-    rv_progress = abap_false.
-    CHECK mv_alive = abap_true.
-
-    IF mo_out->is_connected( ) = abap_false.
-      IF mo_in->is_connected( ).
-        mo_in->disconnect( ).
-      ENDIF.
-      rv_progress = abap_true.
-      mv_alive = abap_false.
-    ELSE.
-      IF mo_in->has_data( ).
-        CHECK mo_out->is_blocked( ) <> abap_true.
-        rv_progress = abap_true.
-        on_data( ).
-      ELSEIF mo_in->is_closed( ).
-        mo_out->close( ).
-        rv_progress = abap_true.
-        mv_alive = abap_false.
-      ELSEIF mo_in->is_connected( ) = abap_false.
-        mo_out->disconnect( ).
-        rv_progress = abap_true.
-        mv_alive = abap_false.
-      ENDIF.
-    ENDIF.
-  ENDMETHOD.
+       IF mo_out->is_connected( ) = abap_false.
+         IF mo_in->is_connected( ).
+           mo_in->disconnect( ).
+         ENDIF.
+         rv_progress = abap_true.
+         mv_alive = abap_false.
+       ELSE.
+         IF mo_in->has_data( ).
+           CHECK mo_out->is_blocked( ) <> abap_true.
+           rv_progress = abap_true.
+           on_data( ).
+         ELSEIF mo_in->is_closed( ).
+           mo_out->close( ).
+           rv_progress = abap_true.
+           mv_alive = abap_false.
+         ELSEIF mo_in->is_connected( ) = abap_false.
+           mo_out->disconnect( ).
+           rv_progress = abap_true.
+           mv_alive = abap_false.
+         ENDIF.
+       ENDIF.
+     ENDMETHOD.
     ```
 <br>
-    If `has_data( )` returns true, i.e. if the ABAP Operator receives a signal from the corresponding Data Intelligence Pipeline operator, we call the `on_data( )` method, which contains the wanted functionality (receive the record count based on a given table or CDS View). Include the following lines after the `step( )` method:
+If `has_data( )` returns true, i.e. if the ABAP Operator receives a signal from the corresponding Data Intelligence Pipeline operator, we call the `on_data( )` method, which contains the wanted functionality (receive the record count based on a given table or CDS View). Include the following lines after the `step( )` method:
 ```abap
   METHOD on_data.
     DATA:
