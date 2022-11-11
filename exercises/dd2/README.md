@@ -175,8 +175,10 @@ Include the following lines after the `step( )` method:
   ENDMETHOD.
 ```
 <br>
+
 We can outcomment the parameter value retrieval (see line 30 in screenshot below)<br><br>
-![](/exercises/dd2/images/dd2-014c.JPG)<br><br>
+![](/exercises/dd2/images/dd2-014c.jpg)<br><br>
+
 Now click the ***Save*** button.<br><br>
 The complete code of the local class `lcl_process` should now look as follows:
 <br>
@@ -212,7 +214,7 @@ CLASS lcl_process IMPLEMENTATION.
     "This method is called before the graph is started.
 
     "Read parameters from the config here.
-    mv_myparameter = to_upper( if_dhape_graph_process~get_conf_value( '/Config/myparameter' ) ).
+    "mv_myparameter = to_upper( if_dhape_graph_process~get_conf_value( '/Config/myparameter' ) ).
 
     "Do initialization here.
     mo_util     = cl_dhape_util_factory=>new( ).
