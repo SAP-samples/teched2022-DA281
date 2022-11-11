@@ -62,7 +62,7 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
 1. Logon to the SAP GUI of your conneted S/4HANA system and run transaction `DHAPE` (SAP Data Intelligence - Operator Workbench). Then click on the button ***Generate Class***.<br><br>
 ![](/exercises/dd2/images/dd2-002a.jpg)<br>
 
-   Alternatively, you can also directly open the underlying ABAP report by running transaction SE38 (ABAP Editor) and entering DHAPE_CREATE_OPERATOR_CLASS. Then just ***Execute*** (![](/exercises/dd2/images/Execute.JPG) or ***F8***) this report.<br><br>
+   **Alternatively**, you can also directly open the underlying ABAP report by running transaction SE38 (ABAP Editor) and entering DHAPE_CREATE_OPERATOR_CLASS. Then just ***Execute*** (![](/exercises/dd2/images/Execute.jpg) or ***F8***) this report.<br><br>
    ![](/exercises/dd2/images/dd2-002b.jpg)<br>
 
 2. Enter the required parameters and ***Execute***.<br><br>
