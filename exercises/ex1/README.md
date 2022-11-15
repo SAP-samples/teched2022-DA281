@@ -227,7 +227,7 @@ Open the configuration of the ***Get Header*** operator and select ***only once*
 
 12. Enter the needed configuration parameters for the ***Write File*** operator. These are:
    - Label: **`Sales Order to S3`** (Optional)
-   - Connection: Choose type ***Connection Management*** and then the connection ID **`TechEd_S3`**
+   - Connection: Choose type ***Connection Management*** and then the connection ID **`DI_DATA_LAKE`**
    - Path mode: **`Static (from configuration)`**
    - Path: **`/DAT161/XXXX/Sales_Order_0001.csv`**, where XXXX is your User name, for example "/DAT161/TA99/Sales_Order_0001.csv"
    - Mode: **`Append`**
@@ -263,7 +263,7 @@ Open the configuration of the ***Get Header*** operator and select ***only once*
 18. In the ***Metadata Explorer*** application main menue, click on ***Browse Connections***.<br><br>
 ![](/exercises/ex1/images/ex1-050b.JPG)<br><br>
 
-19. In order to easily find our connection to the target S3 Object Store, you may leverage the search functionality. Enter `TechEd_s` into the search field and click on the spyclass icon. Click on the **`TechEd_S3`** tile.<br><br>
+19. In order to easily find our connection to the target S3 Object Store, you may leverage the search functionality. Enter `TechEd_s` into the search field and click on the spyclass icon. Click on the **`DI_DATA_LAKE`** tile.<br><br>
 ![](/exercises/ex1/images/ex1-051b.JPG)<br><br>
 
 20. On the next drill-down view, click on the **`DAT161`** directory that you had specified in the ***Write File*** operator, and then drill down to your specific User directory, for example **`TA99`**.<br><br>
@@ -332,7 +332,7 @@ The Graph Terminanor allows us to run the Pipeline once, and when the new file g
    Then click the pencil of the **Source Object** parameter to configure the source file located in the S3 connection. Drill down to your individual folder under **DAT161** and select the file **`Sales_Order_Staging`**. Then click ***OK***.<br><br>
    ![](/exercises/ex1/images/ex1-131b.JPG)<br><br>
      
-12. Select Service to S3 and select the previously used Connection ID TechEd_S3: <br><br> 
+12. Select Service to S3 and select the previously used Connection ID DI_DATA_LAKE: <br><br> 
 ![](/exercises/ex1/images/ex1-065b.JPG)<br><br>
 
 13. Then click the ***S3 Source File*** folder icon to browse through the S3 bucket. Drill down to your individual folder under ***DAT161*** and select the file ***Sales_Order_Staging.csv***. Then click ***OK***. <br><br>
@@ -425,7 +425,7 @@ The Graph Terminanor allows us to run the Pipeline once, and when the new file g
 31. Open the configuration panel of the ***Structured File Producer*** operator aby clicking on the Edit / Pencil icon of the Target Configuration to start the configuration of your target S3 scenario:<br>
     ![](/exercises/ex1/images/ex1-107b.JPG)<br><br>
 	
-	Select S3 as ***Service*** and use Connection ID ***TechEd_S3***. <br><br>
+	Select S3 as ***Service*** and use Connection ID ***DI_DATA_LAKE***. <br><br>
 	![](/exercises/ex1/images/ex1-111b.JPG)<br><br>
 	
 	Click on the ***Browse*** Button of ***Target*** parameter: <br><br>
