@@ -229,7 +229,7 @@ Open the configuration of the ***Get Header*** operator and select ***only once*
    - Label: **`Sales Order to S3`** (Optional)
    - Connection: Choose type ***Connection Management*** and then the connection ID **`DI_DATA_LAKE`**
    - Path mode: **`Static (from configuration)`**
-   - Path: **`/DAT161/XXXX/Sales_Order_0001.csv`**, where XXXX is your User name, for example "/DAT161/TA99/Sales_Order_0001.csv"
+   - Path: **`/shared/DA281/XXXX/Sales_Order_0001.csv`**, where XXXX is your User name, for example "/shared/DA281/TA99/Sales_Order_0001.csv"
    - Mode: **`Append`**
    - Join batches: **`True`**<br><br>
    
@@ -307,7 +307,7 @@ In this last part of the S/4HANA ABAP CDS View intergration exercise, you will e
    
    Optinally you can either keep the Wiretap operator in the pipeline or remove it and directly connect the Get Header Operator with the Write File Operator as it is being done in the following steps. 
 
-5. Open the configuration of the File Writer operator and enter the new target path/file name **`/DAT161/TA99/Sales_Order_Staging.csv`**. Change Mode to **`Overwrite`**. Then save the Pipeline.<br><br>
+5. Open the configuration of the File Writer operator and enter the new target path/file name **`/shared/DA281/TA99/Sales_Order_Staging.csv`**. Change Mode to **`Overwrite`**. Then save the Pipeline.<br><br>
 ![](/exercises/ex1/images/ex1-060b.JPG)<br><br>
 
 6. Open the configuration of the ***Get Header*** operator and change the Add column names configuration parameter to ***for each batch***. The ***for each batch*** selection will make sure that the column names of the CDS View will only be added once for all data packages being received from S/4 HANA. This is required as we want to overwrite the staging file, which will then be joined with additional metadata from the customer master data for each processed file.<br><br>
@@ -431,7 +431,7 @@ The Graph Terminanor allows us to run the Pipeline once, and when the new file g
 	Click on the ***Browse*** Button of ***Target*** parameter: <br><br>
 	![](/exercises/ex1/images/ex1-109b.JPG)<br><br>
 	
-	Browse to the path in S3 with /DAT161/XXXX, where XXXX stands for your user ID e.g. /DAT161/TA99 and click on + icon: <br><br>
+	Browse to the path in S3 with /shared/DA281/XXXX, where XXXX stands for your user ID e.g. /shared/DA281/TA99 and click on + icon: <br><br>
 	![](/exercises/ex1/images/ex1-110b.JPG)<br><br>
 	
 	Enter a name of the target folder, which we will sue to store our files, e.g. ***Enriched_Sales_Order*** and click on ***Add*** <br><br>
