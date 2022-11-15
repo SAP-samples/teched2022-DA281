@@ -425,7 +425,7 @@ The Graph Terminanor allows us to run the Pipeline once, and when the new file g
 31. Open the configuration panel of the ***Structured File Producer*** operator aby clicking on the Edit / Pencil icon of the Target Configuration to start the configuration of your target S3 scenario:<br>
     ![](/exercises/ex1/images/ex1-107b.JPG)<br><br>
 	
-	Select S3 as ***Service*** and use Connection ID ***DI_DATA_LAKE***. <br><br>
+	Select SDL as ***Service*** and use Connection ID ***DI_DATA_LAKE***. <br><br>
 	![](/exercises/ex1/images/ex1-111b.JPG)<br><br>
 	
 	Click on the ***Browse*** Button of ***Target*** parameter: <br><br>
