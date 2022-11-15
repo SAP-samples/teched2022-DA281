@@ -332,7 +332,7 @@ The Graph Terminanor allows us to run the Pipeline once, and when the new file g
    Then click the pencil of the **Source Object** parameter to configure the source file located in the S3 connection. Drill down to your individual folder under **DAT161** and select the file **`Sales_Order_Staging`**. Then click ***OK***.<br><br>
    ![](/exercises/ex1/images/ex1-131b.JPG)<br><br>
      
-12. Select Service to S3 and select the previously used Connection ID DI_DATA_LAKE: <br><br> 
+12. Select Service to SDL and select the previously used Connection ID DI_DATA_LAKE: <br><br> 
 ![](/exercises/ex1/images/ex1-065b.JPG)<br><br>
 
 13. Then click the ***S3 Source File*** folder icon to browse through the S3 bucket. Drill down to your individual folder under ***DAT161*** and select the file ***Sales_Order_Staging.csv***. Then click ***OK***. <br><br>
