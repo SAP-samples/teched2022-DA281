@@ -270,7 +270,7 @@ ENDCLASS.
 ***Save*** the local class and activate (![](/exercises/dd2/images/Activate.jpg)) your ABAP Operator implementations.<br>
 ![](/exercises/dd2/images/dd2-014d.jpg)<br><br>
 
-15. When you clicked the Activation button, and if you haven't yet activated your new artifacts, you are prompted for a selection of objects. Check both and confirm (![](images/Confirm_black.JPG)).<br><br>
+15. After you have clicked the Activation button (and if you haven't activated your new artifacts before), you are prompted for a selection of objects. Check both and confirm (![](images/Confirm_black.JPG)).<br><br>
     ![](/exercises/dd2/images/dd2-015b.jpg)<br><br>
 
 The ABAP Operator implementation is now finished. The operator can immediately be used in SAP Data Intelligence Pipeline. The next section of this Deep Dive demo describes how this is done.<br><br>
@@ -283,37 +283,37 @@ Technically, the approaches for calling function modules in S/4HANA are the same
 The integration of ABAP Operators is done via Pipelines in the SAP Data Inteligence Modeler.
 
 1.	Logon to SAP Data Intelligence to access the Launchpad application and click on the ***Modeler*** tile.<br><br>
-![](/exercises/dd2/images/dd2-016b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-016b.jpg)<br><br>
 
 2.	In the DI Modeler, make sure you are in the ***Graphs*** tab (see left side) and click the ***+*** symbol and select **Use Generation 1 Operators** in order to create a new Pipeline.<br><br>
-![](/exercises/dd2/images/dd2-029b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-029b.jpg)<br><br>
 
 3.	A new Pipeline canvas opens and the design focus automatically changes to the ***Operators*** tab (see left side). Drag the ***Custom ABAP Operator*** icon from the Operator list and drop it onto the canvas. Then do one click on the ***Custom ABAP Operator*** node in the canvas and open the configuration panel by clicking on the related symbol.<br><br>
-![](/exercises/dd2/images/dd2-018b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-018b.jpg)<br><br>
 
 4.	In the configuration panel on the right side, select the ***ABAP Connection*** (RFC or Websocket RFC connection) to the SAP S/4HANA system that provides the ABAP Operator. If done, click on the selection button of the field for the ***ABAP Operator***.<br><br>
-![](/exercises/dd2/images/dd2-019b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-019b.jpg)<br><br>
 
 5.	From the pop-up window, select the custom ABAP Operator that you want to call from the Pipeline. In our case, it's the ABAP Operator that receives a table or CDS View name, provides the number of records for this particular table or CDS View, and sends it back to the client. Hence, choose ***Operator Class: Record Count*** and click ***OK***<br><br>
-![](/exercises/dd2/images/dd2-020b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-020b.jpg)<br><br>
 
 6.	As you can see, the ABAP Operator node in the Pipeline canvas gets automatically updated with the operator's name in S/4HANA and the ports that we have defined in the previous section of this Deep Dive demo. (The `GET_INFO( )`method in our operator's ABAP class provides the corresponding meta information.)<br><br>
-![](/exercises/dd2/images/dd2-021b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-021b.jpg)<br><br>
 
 7.	For verifying the functionality of the ABAP Operator call, we'll be using a ***Terminal*** Operator in the Pipeline. This operator allows the sending of user inputs and the reception of the results. Drag the ***Terminal*** icon from the Operator list and drop it onto the Pipeline canvas. Then connect<br><br>
 - the output port of the ABAP Operator with the input port of the Terminal Operator and
 - the output port of the Terminal Operator with the input port of the ABAP Operator.
 Then ***Save*** the Pipeline.<br><br>
-![](/exercises/dd2/images/dd2-022b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-022b.jpg)<br><br>
 
 8.	For saving the Pipeline, you are prompted for the name of the pipeline (including namespace information), a description, and the category under which the Pipeline can be found in the ***Graphs*** tab of the Modeler. Fill in the needed and click ***OK***.<br><br>
-![](/exercises/dd2/images/dd2-023b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-023b.jpg)<br><br>
 
 9.	The Pipeline now gets validated by SAP Data Intelligence. You can see the results in the ***Validation*** tab of the status section in the Modeler UI. If okay, you can now start the Pipeline by clicking on the ***Play*** symbol in the menue bar.<br><br>
-![](/exercises/dd2/images/dd2-025b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-025b.jpg)<br><br>
 
 10.	Change back to the ***Status*** tab of the status section in the Modeler UI. Once the status has turned to ***running***, click one time on the ***Terminal*** node and open the Terminal UI with a click on the corresponding icon.<br><br>
-![](/exercises/dd2/images/dd2-026b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-026b.jpg)<br><br>
 
 11.	In the lower section of the Terminal UI, you can now enter a name of a table or CDS View as input (after the SDH prompt) that shall be send to the ABAP Operator in S/4HANA. After each input press ***Return***. As a response from our custom ABAP Operator, you should now receive the number of records in the specified table / CDS View in the upper section of the Terminal UI, what proves the functionality and integration success.<br><br>
 You can try out the following tables and CDS Views:
@@ -331,7 +331,7 @@ You can try out the following tables and CDS Views:
   ![](/exercises/dd2/images/dd2-027b.JPG)<br><br>
 	
 12.	Don't forget to stop the Pipeline again if you haven't embedded a ***Graph Terminator*** before.<br><br>
-![](/exercises/dd2/images/dd2-028b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-028b.jpg)<br><br>
 
 ## Summary
 
