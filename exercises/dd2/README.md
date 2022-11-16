@@ -323,9 +323,9 @@ Then ***Save*** the Pipeline.<br><br>
 
 ## Summary
 
-We've now successfully implemented a custom ABAP Operator in S/4HANA and consumed it from a Data Intelligence Pipeline.
+We've now successfully implemented a custom ABAP Operator in S/4HANA and consumed it from a Data Intelligence Pipeline.<br><br>
 
-The next part of the DA281 TechEd workshop is [Deep Dive 3- Technical Background for Replication Flows in SAP Data Intelligence](exercises/dd3/README.md)
+The next part of the DA281 TechEd workshop is [Deep Dive 3- Technical Background for Replication Flows in SAP Data Intelligence](../../exercises/dd3/README.md)
 
 <br><br>
 
