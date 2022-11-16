@@ -9,9 +9,9 @@ When searching for your pipeline, make sure you have selected the category ***da
    ***Note:*** In case you have kept the Wiretap Operator between ***Get Header*** and ***Write File*** before as described in Exercise 1.4 Step 4. you can ignore this step. In case you have removed it, please add the Wiretap operator inside your pipeline and add it between the ***Get Header*** and ***Write File*** Operator.<br><br>
 ![](/exercises/ex2/images/ex2-013b.JPG)<br><br>
 4. ***Save*** the graph and now ***Run*** it <br><br>
-![](/exercises/ex2/images/ex2-028b.JPG)<br><br>
+![](/exercises/ex2/images/ex2-028c.jpg)<br><br>
 5. If you see that the Pipeline changes to a ***running*** status, open the Wiretap UI.<br><br>
-![](/exercises/ex2/images/ex2-014c.JPG)<br><br>
+![](/exercises/ex2/images/ex2-014c.jpg)<br><br>
 6. You can see now that the initial load from the ABAP CDS View in S/4HANA was successfully conducted. Please **leave the Wiretap UI open**.<br><br>
 ![](/exercises/ex2/images/ex2-015b.JPG)<br><br>
 7. Now create your own Pipeline for generating EPM Sales Order records like already shown in [Deep Dive 2.2](../../exercises/dd2/README.md#deep-dive-22---integrate-the-custom-abap-operator-in-a-sap-data-intelligence-pipeline).<br>
