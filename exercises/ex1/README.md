@@ -115,7 +115,7 @@ Now connect the ***output port of the HANA Client*** with the ***input port of t
 	 Click the browse button next to Table parameter: <br><br>
 	![](/exercises/ex1/images/ex1-129b.JPG)<br><br>
 	
-	Select your user schema “XXXX_EPM_TARGET”, where XXXX refers to your user name, e.g. “TA99_EPM_TARGET. <br><br>
+	Select your user schema “XXXX_EPM”, where XXXX refers to your user name, e.g. “TA99_EPM. <br><br>
 	![](/exercises/ex1/images/ex1-023b.JPG)<br><br>
 
 	Double click on your user schema and inside your user schema you will find a pre-defined table with your user id “XXXX_BUSINESS_PARTNER”, e.g. “TA99_BUSINESS_PARTNER” <br><br>
@@ -164,7 +164,7 @@ Now connect the ***output port of the HANA Client*** with the ***input port of t
 12. In order to easily find our connection to the target HANA Cloud Database, you may leverage the search functionality. Enter `HANA_Cloud` into the search field and click on the glasses icon. Click on the **`HANA_Cloud`** tile.<br><br>
 ![](/exercises/ex1/images/ex1-034b.JPG)<br><br>
 
-13. On the next screen search for your user schema that you selected in your Pipeline, e.g. XXXX_EPM_TARGET, where XXXX stands for your user ID.<br><br>
+13. On the next screen search for your user schema that you selected in your Pipeline, e.g. XXXX_EPM, where XXXX stands for your user ID.<br><br>
 ![](/exercises/ex1/images/ex1-035b.JPG)<br><br>
 
 14. Select your HANA table that you previously selected in the HANA Client operator and open the factsheet by clicking on the glasses ***View Fact Sheet*** option on the right-hand side of your table:<br><br>
@@ -376,7 +376,7 @@ The Graph Terminanor allows us to run the Pipeline once, and when the new file g
 	![](/exercises/ex1/images/ex1-077b.JPG)<br><br>
 
 	The following selectin screen appears. Now drilldown into your user HANA schema in HANA Cloud where you have stored your Customer Data and confirm the selection with a click on **OK**, e.g.: <br><br>
-	xxxx_EPM_TARGET / xxxx_BUSINESS_PARTNER, where xxxx stands for your user ID, e.g. TA99_EPM_TARGET / TA99_BUSINESS_PARTNER  <br><br> 
+	xxxx_EPM / xxxx_BUSINESS_PARTNER, where xxxx stands for your user ID, e.g. TA99_EPM / TA99_BUSINESS_PARTNER  <br><br> 
 
 	![](/exercises/ex1/images/ex1-078b.JPG)<br><br>
 
