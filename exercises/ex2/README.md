@@ -34,7 +34,7 @@ In order to not have you navigating back and forth, all steps of that Deep Dive 
 13.	For verifying the functionality of the ABAP Operator call, we'll be using a ***Terminal*** Operator in the Pipeline. This operator allows the sending of user inputs and the reception of the results. Drag the ***Terminal*** icon from the Operator list and drop it onto the Pipeline canvas. Then connect
     - the output port of the ABAP Operator with the input port of the Terminal Operator and
     - the output port of the Terminal Operator with the input port of the ABAP Operator.
-<br><br>Then ***Save*** the Pipeline.<br><br>
+<br><br>***Save*** the Pipeline.<br><br>
 ![](/exercises/ex2/images/dd2-022b.jpg)<br><br>
 
 14.	For saving the Pipeline, you are prompted for the name of the pipeline (including namespace information), a description, and the category under which the Pipeline can be found in the ***Graphs*** tab of the Modeler. Please enter the following parameters prompted in the pop-up windows:<br>
