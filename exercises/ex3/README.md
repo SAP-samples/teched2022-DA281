@@ -1,4 +1,4 @@
-# Exercise 3 - Integrate ABAP CDS Views in SAP Data Intelligence Replication Management Flow
+# Exercise 2 - Integrate ABAP CDS Views in SAP Data Intelligence Replication Management Flow
 For the integration of ABAP CDS Views in S/4HANA, SAP Data Intelligence provides standard ABAP operator shells that can easily be configured according to your use cases. In principal, you can leverage the following approach:
 
 > **Important**:
@@ -95,3 +95,35 @@ For the integration of ABAP CDS Views in S/4HANA, SAP Data Intelligence provides
     - Click for each dataset on the Data Preview tab and explore for each dataset the data replicated
 
 22.  After the replication flow has successfully run and you explored the data, execute the Custom ABAP operator created in [Exercise 2](../ex2/README.md#exercise-15---using-a-custom-abap-operator-to-verify-your-delta-replication-of-epm-sales-orders) to create new sales orders.
+
+
+## Summary
+In the Deep Dive demos and in the Exercises, we have jointly worked on the implementation of delta-enabled data sources and remote functionality in S/4HANA and have leveraged these features directly in SAP Data Intelligence. We could now extend these use cases for more complex scenarios. The general implementation approaches and the support that the Data Intelligence applications provide would then still be the same.<br>
+In case you have asked yourself if there are similar options for the integration with other ABAP systems such as ECC or BW, the answer is 'yes'! In these cases, you can make use of the unmodifying DMIS add-on, which provides the ABAP Pipeline Engine also for these systems.<br>
+This given, you can realize real-time replication scenarios via SLT integration to SAP Data Intelligence, leverage the ODP Reader operators, and also trigger function module execution on ECC or BW systems, too.<br>
+More information about general ABAP integration with Data Intelligence can be found [here](https://blogs.sap.com/2019/10/29/abap-integration-for-sap-data-hub-and-sap-data-intelligence-overview-blog/). and an additional example on how to use Custom ABAP Operator with Data Intelligence can be found [here](https://blogs.sap.com/2021/06/01/integrating-abap-function-modules-with-sap-data-intelligence/). <br><br>
+**THANK YOU VERY MUCH** for having participated in this Deep Dive and Hands On workshop. We hope you have enjoyed it!<br><br>
+Martin Boeckling, Daniel Ingenhaag, Matthias Kretschmer, and Bengt Mertens<br><br>
+
+*****************************************************
+<br> **Table of Contents / Navigation**
+<br>
+- [Overview and Getting Started](../../exercises/ex0/README.md#overview-and-getting-started)
+  - [Deep Dive demos vs. Exercises](../../exercises/ex0/README.md#deep-dive-vs-exercise-sections-in-this-document)
+  - [Short introduction to the Enterprise Procurement Model (EPM) in ABAP systems](../../exercises/ex0/README.md#short-introduction-to-the-enterprise-procurement-model-epm-in-sap-s4hana)
+  - Access to the exercises' Data Intelligence environment (**will be provided after the session**)
+- [Deep Dive 1 - ABAP CDS View based data extraction in SAP Data Intelligence](../../exercises/dd1/README.md#deep-dive-1---abap-cds-view-based-data-extraction-in-sap-data-intelligence)
+- [Deep Dive 2 - Creating a Custom ABAP Operator and making use of it in an SAP Data Intelligence Pipeline](README.md)
+- [Deep Dive 3- Technical Background for Replication Flows in SAP Data Intelligence](../../exercises/dd3/README.md)
+
+- [Overview and Getting Started](exercises/ex0/README.md#overview-and-getting-started)
+
+- [Exercise 1 - Replicating data from S/4HANA ABAP CDS Views in SAP Data Intelligence](../../exercises/ex1/)
+    - [Exercise 1.1 - Consume the EPM Business Partner ABAP CDS Views in SAP Data Intelligence](../../exercises/ex1#exercise-11-sub-exercise-1-description)
+    - [Exercise 1.2 - Extend the Pipeline to transfer the Customer data into a HANA Cloud Database with Initial Load mode](../../exercises/ex1#exercise-12-sub-exercise-2-description)
+    - [Exercise 1.3 - Implement a Pipeline for delta transfer of enhanced EPM Sales Order data from S/4HANA to an S3 Object Store](../../exercises/ex1#exercise-13-sub-exercise-1-description)
+    - [Exercise 1.4 - Extend the Pipeline for joining Sales Order with Customer data for each change in Sales Orders and persist results in S3](../../exercises/ex1#exercise-14-sub-exercise-1-description)
+    - [Exercise 1.5 - Using a custom ABAP Operator to verify your Delta Replication of EPM Sales Orders](../../exercises/ex2/)
+
+- [Exercise 2 - Integrate ABAP CDS Views in SAP Data Intelligence Replication Management Flow](README.md)
+<br><br>
