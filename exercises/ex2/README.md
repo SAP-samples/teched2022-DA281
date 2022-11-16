@@ -50,7 +50,7 @@ In order to not have you navigating back and forth, all steps of that Deep Dive 
     - Name: `teched.XXXX.EPM_FM_Call_SO_Generator`, where XXXX is your user name, for example "teched.TA99.EPM_FM_Call_SO_Generator"
     - Description: `XXXX - Generate EPM SO data via ABAP FM call`, where XXXX is your user name, for example "TA99 - Generate EPM SO data via ABAP FM call"
     - Category: `da281`.
-Finally click ***OK***.<br><br>
+    - Finally click ***OK***.<br><br>
 ![](/exercises/ex2/images/ex2-009c.JPG)<br><br>
 
 15.	You can now start the Pipeline by clicking the ***Play*** symbol in the menue bar.<br><br>
