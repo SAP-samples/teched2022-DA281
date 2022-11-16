@@ -66,13 +66,13 @@ Now produce several Sales Order records.<br>
 18. In the Browser tabs, switch back to the ***Wiretap UI*** of your Replication and Enrichment Pipeline. You should now see that a message with new records came in, which all have the "U" indicator for Updates. This verifies the delta-enablement of the ABAP CDS View and the immediate integration with Data Intelligence.<br><br>
 ![](/exercises/ex2/images/ex2-018b.JPG)<br><br>
 
-19. Now please throw one last inspecting glance at the files on S3. Here, you can again use the data browser feature in the Data Intelligence ***Metadata Explorer***. Open the application via the Launchpad.<br><br>
+19. Now please throw one last inspecting glance at the files on the DI Data Lake. Here, you can again use the data browser feature in the Data Intelligence ***Metadata Explorer***. Open the application via the Launchpad.<br><br>
 ![](/exercises/ex2/images/ex2-019b.JPG)<br><br>
 
 20. In the Metadata Explorer main screen, click on ***Browse Connections***.<br><br>
 ![](/exercises/ex2/images/ex2-020b.JPG)<br><br>
 
-21. Click on the Connection **"DI_DATA_LAKE"** and drill further down to the folders **"DA281"** and that of **your user** (e.g. "TA99").<br><br>
+21. Click on the Connection **"DI_DATA_LAKE"** and drill further down to the folders **"shared"** --> **"DA281"** --> that of **your user** (e.g. "TA99").<br><br>
 ![](/exercises/ex2/images/ex2-021b.JPG)<br><br>
 ![](/exercises/ex2/images/ex2-022b.JPG)<br><br>
 
