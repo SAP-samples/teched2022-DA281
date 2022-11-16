@@ -316,7 +316,7 @@ Then ***Save*** the Pipeline.<br><br>
 ![](/exercises/dd2/images/dd2-026b.jpg)<br><br>
 
 11.	In the lower section of the Terminal UI (the Input Prompt), you can now enter any input or just press ***Return*** in order to send a trigger signal to the ABAP Operator in S/4HANA. As a response for each input from our custom ABAP Operator, you will receive a confirmation message in the upper section of the Terminal UI, what proves our ABAP operator code functionality and the integration success.<br><br>
-![](/exercises/dd2/images/dd2-027b.JPG)<br><br>
+![](/exercises/dd2/images/dd2-027b.jpg)<br><br>
 	
 12.	Don't forget to stop the Pipeline again, using either the ***stop*** icon in the menue bar or the one in the status area.<br><br>
 ![](/exercises/dd2/images/dd2-028b.jpg)<br><br>
@@ -325,7 +325,7 @@ Then ***Save*** the Pipeline.<br><br>
 
 We've now successfully implemented a custom ABAP Operator in S/4HANA and consumed it from a Data Intelligence Pipeline.
 
-The next part of the DA281 TechEd workshop is [Deep Dive 3- Technical Background for Replication Flows in SAP Data Intelligence](../exercises/dd3/README.md)
+The next part of the DA281 TechEd workshop is [Deep Dive 3- Technical Background for Replication Flows in SAP Data Intelligence](exercises/dd3/README.md)
 
 <br><br>
 
