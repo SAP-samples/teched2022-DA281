@@ -339,7 +339,7 @@ The next part of the DA281 TechEd workshop is [Deep Dive 3- Technical Background
   - Access to the exercises' Data Intelligence environment (**will be provided after the session**)
 - [Deep Dive 1 - ABAP CDS View based data extraction in SAP Data Intelligence](../../exercises/dd1/README.md#deep-dive-1---abap-cds-view-based-data-extraction-in-sap-data-intelligence)
 - [Deep Dive 2 - Creating a Custom ABAP Operator and making use of it in an SAP Data Intelligence Pipeline](README.md)
-- [Deep Dive 3- Technical Background for Replication Flows in SAP Data Intelligence]../../(exercises/dd3/README.md)
+- [Deep Dive 3- Technical Background for Replication Flows in SAP Data Intelligence](../../exercises/dd3/README.md)
 
 - [Overview and Getting Started](exercises/ex0/README.md#overview-and-getting-started)
 
@@ -351,4 +351,4 @@ The next part of the DA281 TechEd workshop is [Deep Dive 3- Technical Background
     - [Exercise 1.5 - Using a custom ABAP Operator to verify your Delta Replication of EPM Sales Orders](../../exercises/ex2/)
 
 - [Exercise 2 - Integrate ABAP CDS Views in SAP Data Intelligence Replication Management Flow](../../exercises/ex3/README.md#exercise-3---integrate-abap-cds-views-in-sap-data-intelligence-replication-management-flow)
-- <br><br>
+<br><br>
