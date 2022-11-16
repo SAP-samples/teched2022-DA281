@@ -20,7 +20,7 @@ After completing these steps you will have created a Pipeline that reads EPM Cus
    ![](/exercises/ex1/images/ex1-002c.JPG)<br><br>
    ![](/exercises/ex1/images/ex1-002d.JPG)<br><br>
    - From the Launchpad, start the ***Modeler*** application by clicking on the corresponding tile.<br><br>
-   ![](/exercises/ex1/images/ex1-003b.JPG)<br><br>
+   ![](/exercises/dd1/images/dd1-019b.JPG)<br><br>
 
 2.	Make sure you are in the ***Graphs*** tab of the Modeler UI (see left side). Then click the ***+*** symbol and select **Use Generation 1 Operators** in order to create a new Pipeline.<br><br>
 ![](/exercises/ex1/images/ex1-123b.JPG)<br><br>
