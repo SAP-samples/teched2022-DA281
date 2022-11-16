@@ -42,7 +42,7 @@ In order to not have you navigating back and forth, all steps to create the Pipe
    - Description: `XXXX - Generate EPM SO data via ABAP FM call`, where XXXX is your user name, for example "TA99 - Generate EPM SO data via ABAP FM call"
    - Category: `da281`.
 Finally click ***OK***.<br><br>
-![](/exercises/ex2/images/ex2-009b.JPG)<br><br>
+![](/exercises/ex2/images/ex2-009c.JPG)<br><br>
 
 15.	You can now start the Pipeline by clicking the ***Play*** symbol in the menue bar.<br><br>
 ![](/exercises/ex2/images/dd2-025b.jpg)<br><br>
