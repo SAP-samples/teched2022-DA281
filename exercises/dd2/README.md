@@ -103,7 +103,7 @@ Here is a step-by-step guideline for creating a custom ABAP Operator. In the spe
           description  = 'Creation of EPM Sales Order'(DSC)
           extensible   = abap_false
           component    = 'com.sap.abap.base'
-          documentid   = 'ZCL_DHAPE_OPER_GEN_EPM_SO'
+          "documentid   = 'ZCL_DHAPE_OPER_GEN_EPM_SO'
           iconsrc      = '../base/SAP_ABAP_Logo.png'
           internal     = abap_false
           subengine    = 'v6'
