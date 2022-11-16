@@ -10,8 +10,8 @@ When searching for your pipeline, make sure you have selected the category ***da
 ![](/exercises/ex2/images/ex2-013b.JPG)<br><br>
 4. ***Save*** the graph and now ***Run*** it <br><br>
 ![](/exercises/ex2/images/ex2-028b.JPG)<br><br>
-5. If you see that both of your Pipelines (data generating as well as data replication and enrichment) are in a ***running*** status, open the Wiretap UI.<br><br>
-![](/exercises/ex2/images/ex2-014b.JPG)<br><br>
+5. If you see that the Pipeline changes to a ***running*** status, open the Wiretap UI.<br><br>
+![](/exercises/ex2/images/ex2-014c.JPG)<br><br>
 6. You can see now that the initial load from the ABAP CDS View in S/4HANA was successfully conducted. Please **leave the Wiretap UI open**.<br><br>
 ![](/exercises/ex2/images/ex2-015b.JPG)<br><br>
 7. Now create your own Pipeline for generating EPM Sales Order records like already shown in [Deep Dive 2.2](../../exercises/dd2/README.md#deep-dive-22---integrate-the-custom-abap-operator-in-a-sap-data-intelligence-pipeline).<br>
