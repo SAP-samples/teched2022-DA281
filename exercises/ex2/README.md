@@ -32,8 +32,8 @@ In order to not have you navigating back and forth, all steps of that Deep Dive 
 ![](/exercises/dd2/images/dd2-021b.jpg)<br><br>
 
 13.	For verifying the functionality of the ABAP Operator call, we'll be using a ***Terminal*** Operator in the Pipeline. This operator allows the sending of user inputs and the reception of the results. Drag the ***Terminal*** icon from the Operator list and drop it onto the Pipeline canvas. Then connect
-- the output port of the ABAP Operator with the input port of the Terminal Operator and
-- the output port of the Terminal Operator with the input port of the ABAP Operator.
+  - the output port of the ABAP Operator with the input port of the Terminal Operator and
+  - the output port of the Terminal Operator with the input port of the ABAP Operator.
 <br>Then ***Save*** the Pipeline.<br><br>
 ![](/exercises/ex2/images/dd2-022b.jpg)<br><br>
 
