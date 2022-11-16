@@ -1,21 +1,29 @@
 ## Exercise 1.5 - Using a custom ABAP Operator to verify your Delta Replication of EPM Sales Orders
 You can now test the delta processing capabilities of the ABAP CDS View based data extraction. A nice task would be to check if Pipeline for Sales Orders replications and enrichment that you have built in [Exercise 1.4 - Extend the Pipeline for joining Sales Order with Customer data for each change in Sales Orders and persist results in S3](../ex1#exercise-13---implement-a-pipeline-for-delta-transfer-of-enhanced-epm-sales-order-data-from-s4hana-to-an-s3-object-store) is really processing the delta records from EPM in S/4HANA.<br><br>
+
 1. In case your pipeline ***EPM_SalesOrder_Replication_Enrich_to_S3*** from exercise 1.4 is still running, you can directly go to step 5. In case you have stopped the pipeline, click on the ***Graphs*** tab of the Modeler UI (see left side). Then enter your user name in the search field (if you made your user name a part of the Pipeline names or descriptions) and start the search. You will now get a list of the pipelines that you have implemented. Click on your 'EPM_SalesOrder_Replication_Enrich_to_S3' Pipeline icon. If the displayed name is too short to recognize a unique name, just hover with your mouse over the Pipeline icons (see below).<br><br>
 When searching for your pipeline, make sure you have selected the category ***da281*** in the available categories.<br><br>
 ![](/exercises/ex2/images/ex2-033c.jpg)<br><br>
 ![](/exercises/ex2/images/ex2-012c.jpg)<br><br>
+
 2. The Pipeline is opened in the canvas area of the Modeler UI.<br><br>
+
 3. Make sure a Wiretap operator exists between the ***Get Header*** and ***To File*** Operator and the Sales Order to S3 Write File Operator:<br><br>
    ***Note:*** In case you have kept the Wiretap Operator between ***Get Header*** and ***Write File*** before as described in Exercise 1.4 Step 4. you can ignore this step. In case you have removed it, please add the Wiretap operator inside your pipeline and add it between the ***Get Header*** and ***Write File*** Operator.<br><br>
 ![](/exercises/ex2/images/ex2-013b.JPG)<br><br>
+
 4. ***Save*** the graph and now ***Run*** it <br><br>
 ![](/exercises/ex2/images/ex2-028c.jpg)<br><br>
+
 5. If you see that the Pipeline changes to a ***running*** status, open the Wiretap UI.<br><br>
 ![](/exercises/ex2/images/ex2-014c.jpg)<br><br>
+
 6. You can see now that the initial load from the ABAP CDS View in S/4HANA was successfully conducted. Please **leave the Wiretap UI open**.<br><br>
 ![](/exercises/ex2/images/ex2-015b.JPG)<br><br>
+
 7. Now create your own Pipeline for generating EPM Sales Order records like already shown in [Deep Dive 2.2](../../exercises/dd2/README.md#deep-dive-22---integrate-the-custom-abap-operator-in-a-sap-data-intelligence-pipeline).<br>
 In order to not have you navigating back and forth, all steps of that Deep Dive session for creating the Pipeline for EPM Sales Order creation are also included in this exercise document.<br><br>
+
 8.	In the DI Modeler, make sure you are in the ***Graphs*** tab (see left side) and click the ***+*** symbol and select **Use Generation 1 Operators** in order to create a new Pipeline.<br><br>
 ![](/exercises/ex2/images/dd2-029b.jpg)<br><br>
 
@@ -38,10 +46,10 @@ In order to not have you navigating back and forth, all steps of that Deep Dive 
 <br><br>
 ![](/exercises/ex2/images/dd2-022b.jpg)<br><br>
 
-14.	For saving the Pipeline, you are prompted for the name of the pipeline (including namespace information), a description, and the category under which the Pipeline can be found in the ***Graphs*** tab of the Modeler. Please enter the following parameters prompted in the pop-up windows:<br>
-   - Name: `teched.XXXX.EPM_FM_Call_SO_Generator`, where XXXX is your user name, for example "teched.TA99.EPM_FM_Call_SO_Generator"
-   - Description: `XXXX - Generate EPM SO data via ABAP FM call`, where XXXX is your user name, for example "TA99 - Generate EPM SO data via ABAP FM call"
-   - Category: `da281`.
+14.	When saving the Pipeline, you are prompted for the name of the pipeline (including namespace information), a description, and the category under which the Pipeline can be found in the ***Graphs*** tab of the Modeler. Please enter the following parameters prompted in the pop-up windows:<br>
+    - Name: `teched.XXXX.EPM_FM_Call_SO_Generator`, where XXXX is your user name, for example "teched.TA99.EPM_FM_Call_SO_Generator"
+    - Description: `XXXX - Generate EPM SO data via ABAP FM call`, where XXXX is your user name, for example "TA99 - Generate EPM SO data via ABAP FM call"
+    - Category: `da281`.
 Finally click ***OK***.<br><br>
 ![](/exercises/ex2/images/ex2-009c.JPG)<br><br>
 
