@@ -49,8 +49,8 @@ Since it is a goal of this workshop to show and get the hands on the complete en
     - [Exercise 1.5 - Using a custom ABAP Operator to verify your Delta Replication of EPM Sales Orders](exercises/ex2/)
 
 - [Exercise 2 - Integrate ABAP CDS Views in SAP Data Intelligence Replication Management Flow](exercises/ex3/README.md#exercise-3---integrate-abap-cds-views-in-sap-data-intelligence-replication-management-flow)
-<br>
-Here is a graphical overview about the topics and processes that we will focus on during this hands-on workshop and how they relate to each other.<br>
+<br><br>
+Here is a graphical overview about the topics and processes that we will focus on during this hands-on workshop and how they relate to each other.
 ![](exercises/ex0/images/deepdive_exercises_overview.jpg)
 
 ## How to obtain support
