@@ -15,7 +15,7 @@ When searching for your pipeline, make sure you have selected the category ***da
 6. You can see now that the initial load from the ABAP CDS View in S/4HANA was successfully conducted. Please **leave the Wiretap UI open**.<br><br>
 ![](/exercises/ex2/images/ex2-015b.JPG)<br><br>
 7. Now create your own Pipeline for generating EPM Sales Order records like already shown in [Deep Dive 2.2](../../exercises/dd2/README.md#deep-dive-22---integrate-the-custom-abap-operator-in-a-sap-data-intelligence-pipeline).<br>
-In order to not have you navigating back and forth, all steps to create the Pipeline for EPM Sales Order creation are also included in this exercise document.<br><br>
+In order to not have you navigating back and forth, all steps of that Deep Dive session for creating the Pipeline for EPM Sales Order creation are also included in this exercise document.<br><br>
 8.	In the DI Modeler, make sure you are in the ***Graphs*** tab (see left side) and click the ***+*** symbol and select **Use Generation 1 Operators** in order to create a new Pipeline.<br><br>
 ![](/exercises/ex2/images/dd2-029b.jpg)<br><br>
 
