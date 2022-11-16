@@ -52,7 +52,7 @@ Since it is a goal of this workshop to show and get the hands on the complete en
 <br><br>
 
 
-Here is a graphical overview about the topics and processes that we will focus on during this hands-on workshop and how they relate to each other.<br><br>
+Here is an **overview** about the topics and processes that we will focus on during this hands-on workshop and how they relate to each other.<br><br>
 ![](exercises/ex0/images/deepdive_exercises_overview.jpg)
 
 ## How to obtain support
