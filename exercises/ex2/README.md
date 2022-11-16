@@ -14,7 +14,7 @@ When searching for your pipeline, make sure you have selected the category ***da
 ![](/exercises/ex2/images/ex2-014b.JPG)<br><br>
 6. You can see now that the initial load from the ABAP CDS View in S/4HANA was successfully conducted. Please **leave the Wiretap UI open**.<br><br>
 ![](/exercises/ex2/images/ex2-015b.JPG)<br><br>
-7. On the tab bar of the canvas area, switch to the Data Generation Pipeline and open the Terminal UI.<br><br>
+7. Now create your own Pipeline for generating EPM Sales Order records like shown in [Deep Dive 2.2](../exercises/dd2/README.md#deep-dive-22---integrate-the-custom-abap-operator-in-a-sap-data-intelligence-pipeline). On the tab bar of the canvas area, switch to the Data Generation Pipeline and open the Terminal UI.<br><br>
 ![](/exercises/ex2/images/ex2-016b.JPG)<br><br>
 8. Put the cursor on the prompt of the lower part (input part) of the Terminal UI and press ***RETURN***. You will see the confirmation from the ABAP Operator about the records created in the EPM demo app.<br><br>
 ![](/exercises/ex2/images/ex2-017b.JPG)<br><br>
