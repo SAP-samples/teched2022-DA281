@@ -73,8 +73,8 @@ Now produce several Sales Order records.<br>
 ![](/exercises/ex2/images/ex2-020b.JPG)<br><br>
 
 21. Click on the Connection **"DI_DATA_LAKE"** and drill further down to the folders **"shared"** --> **"DA281"** --> that of **your user** (e.g. "TA99").<br><br>
-![](/exercises/ex2/images/ex2-021b.JPG)<br><br>
-![](/exercises/ex2/images/ex2-022b.JPG)<br><br>
+![](/exercises/ex2/images/ex2-021c.jpg)<br><br>
+![](/exercises/ex2/images/ex2-022c.jpg)<br><br>
 
 22. Browse into the specified folder inside your user folder **Enriched Sales Order**. <br><br>
     ![](/exercises/ex2/images/ex1-122b.JPG)<br><br>
