@@ -34,7 +34,7 @@ Since it is a goal of this workshop to show and get the hands on the complete en
 - [Overview and Getting Started](exercises/ex0/README.md#overview-and-getting-started)
   - [Deep Dive demos vs. Exercises](exercises/ex0/README.md#deep-dive-vs-exercise-sections-in-this-document)
   - [Short introduction to the Enterprise Procurement Model (EPM) in ABAP systems](exercises/ex0/README.md#short-introduction-to-the-enterprise-procurement-model-epm-in-sap-s4hana)
-  - [Access to the exercises' Data Intelligence environment](https://workshop_registration.cfapps.eu10.hana.ondemand.com/register/danieli)
+  - [Access to the exercises' Data Intelligence environment](https://workshop_registration.cfapps.eu10.hana.ondemand.com/register/danieli) (see also slide 26 in DA281_Hands-On SAP Data Intelligence Connectivity & Integration - ver02.pdf)
 - [Deep Dive 1 - ABAP CDS View based data extraction in SAP Data Intelligence](exercises/dd1/README.md#deep-dive-1---abap-cds-view-based-data-extraction-in-sap-data-intelligence)
 - [Deep Dive 2 - Creating a Custom ABAP Operator and making use of it in an SAP Data Intelligence Pipeline](exercises/dd2/README.md)
 - [Deep Dive 3- Technical Background for Replication Flows in SAP Data Intelligence](exercises/dd3/README.md)
