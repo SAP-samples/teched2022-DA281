@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2022-DA281)](https://api.reuse.software/info/github.com/SAP-samples/teched2022-DA281)
+
 # DA281 - Hands-On Session for SAP Data Intelligence: Connectivity and Integration
 
 ## Description
