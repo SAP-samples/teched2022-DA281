@@ -272,7 +272,7 @@ and for DMIS 2018 SP07 you can check this SAP Note **[SAP Data Intelligence ABAP
 
 ### **Details on Replication Flow architecture**
 
-In the underlying architecture Replication Flows are executed by so called "worker graphs", which internally built based on Data intelligence pipelines, but optimized for data replication use cases to overcome the limitations we have seen in the beginning of this deep dive when using regular pipelines. <br>
+In the underlying architecture Replication Flows are executed by so called "worker graphs", which is internally built based on SAP Data Intelligence pipelines, but optimized for data replication use cases to overcome the limitations we have seen in the beginning of this deep dive when using regular pipelines. <br>
 
 A worker graph is being executed in the background in case a user triggers the execution of a Replication Flow and mainly consists of the source & target connectivity + projection & mapping in case the user is defining a filter or changes the structure of the data set. Theoretically, there is no limit for a user to define how much data sets (also known as Tasks) can be added inside a single Replication Flow, but there are some important aspects we will highlight below that influence this decision.<br>
 
@@ -284,11 +284,11 @@ Please check below how a worker graph looks like: <br>
 
 <br>
 
-In contrast to pipelines, a single worker graph as illustrated above can replicate multiple data sets from the source to the target. Each worker graph has by default a total 10 connections (5 source and 5 target connections) through which the data can be replicated and by default a single Replication Flow has two worker graphs assigned. This setting can be adjusted so that multiple worker graphs are started for a Replication Flow depending on the use case. Additional information can also be found under the following link:
+In contrast to pipelines, a single worker graph as illustrated above can replicate multiple data sets from the source to the target. Each worker graph has by default a total of 10 connections (5 source and 5 target connections) through which the data can be replicated and by default a single Replication Flow has two worker graphs assigned. This setting can be adjusted so that multiple worker graphs are started for a Replication Flow depending on the use case. Additional information can also be found under the following link:
 **[Sizing Replications ](https://help.sap.com/docs/SAP_DATA_INTELLIGENCE/ea95bb6d8ac24cd6a4ad396ca5e35bc6/00ce7f17afcb40a287c1946b9abbafbe.html)**
 
 
-The number of connections per replication flows can be figured in the monitoring application on tab "Replications" on a Replication Flow level using the configuration button. More information can be found here when looking for the actions in the "Replications" tab in the
+The number of connections per replication flows can be checked in the monitoring application using the tab "Replications" on a Replication Flow level by clicking the configuration button. More information can be found here when looking for the actions in the "Replications" tab in the
 **[Monitoring application ](https://help.sap.com/docs/SAP_DATA_INTELLIGENCE/ca509b7635484070a655738be408da63/e352e7f1a99e4b5d989db5ae1e5e5d0b.html)**
 
 
