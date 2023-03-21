@@ -3,8 +3,8 @@
 In this exercise, we will leverage in Data Intelligence Pipelines those ABAP CDS Views that got created during the first Deep Dive demo in the connected S/4HANA system.<br><br>
 The use case is
 - to obtain the Business Partner master data in S/4HANA's demo application **Enterprise Procurement Model (EPM)** and make the records available for the corporate Data Analysts in HANA Cloud Database table.
-- to also persist the transactional data for EPM Sales Orders in S3.
-- In both cases, any single change of these data sources in the S/4HANA system has to be instantly and automatically replicated to the related files in S3 in append mode.
+- to also persist the transactional data for EPM Sales Orders in DI Data Lake.
+- In both cases, any single change of these data sources in the S/4HANA system has to be instantly and automatically replicated to the related files in DI Data Lake in append mode.
 - Additionally, the Sales Order data have to be enriched with Customer master data. For the initial load and then on every change committed to the EPM Sales Order data in S/4HANA.
 
 (As a reminder: You can recap the relationship between the relevant EPM table entities that are used in this exercise [here](../ex0))<br>
@@ -155,7 +155,7 @@ Now connect the ***output port of the HANA Client*** with the ***input port of t
 9. ***Stop*** the Pipeline.<br><br>
 ![](/exercises/ex1/images/ex1-031b.JPG)<br><br>
 
-10. As a verification of the successful load of the data to the file in S3, we can use the ***Metadata Explorer*** as integrated part of SAP Data Intelligence. Please go back to the Launchpad and click on the corresponding tile.<br><br>
+10. As a verification of the successful load of the data to the file in DI Data Lake, we can use the ***Metadata Explorer*** as integrated part of SAP Data Intelligence. Please go back to the Launchpad and click on the corresponding tile.<br><br>
 ![](/exercises/ex1/images/ex1-032b.JPG)<br><br>
 
 11. In the ***Metadata Explorer*** application main menue, click on ***Browse Connections***.<br><br>
@@ -180,7 +180,7 @@ Now connect the ***output port of the HANA Client*** with the ***input port of t
 
 **Very well done!** You have implemented a Pipeline that extracts Initial Load data from an ABAP CDS View in S/4HANA to a table stored in a target HANA Cloud database.
 
-## Exercise 1.3 - Implement a Pipeline for delta transfer of enhanced EPM Sales Order data from S/4HANA to an S3 Object Store
+## Exercise 1.3 - Implement a Pipeline for delta transfer of enhanced EPM Sales Order data from S/4HANA to an DI Data Lake Object Store
 
 In the next section, we'll also take care for the Sales Order transaction data from EPM and will right away establish a replication (initial load plus following delta processing) transfer mode.
 
@@ -239,7 +239,7 @@ Open the configuration of the ***Get Header*** operator and select ***only once*
 13.	***Save*** your Pipeline.
       - Click on the Disk symbol in the menue bar.
       - Because you save the Sales Order Pipeline for the first time, you are prompted for some inputs.<br>
-      - As Name, enter **`teched.XXXX.EPM_SalesOrder_Replication_to_Data_Lake`**, where **XXXX** is your user name, for example "teched.TA99.EPM_SalesOrder_Replication_to_S3".<br>
+      - As Name, enter **`teched.XXXX.EPM_SalesOrder_Replication_to_Data_Lake`**, where **XXXX** is your user name, for example "teched.TA99.EPM_SalesOrder_Replication_to_DI_Data_Lake".<br>
       - As Description, please enter **`XXXX - Replicate S/4HANA EPM Customer Data to Data Lake`**,where **XXXX** is your user name, for example "TA99 - Replicate S/4HANA EPM Sales  Order Data to Data Lake". (The description will show up in the Pipeline status information later on.)<br>
       - As Catergory, enter **`da281`**, which is the name under which you can find your Pipeline in the ***Graphs*** tab.<br>
       - Click ***OK***.<br><br>
@@ -275,7 +275,7 @@ Open the configuration of the ***Get Header*** operator and select ***only once*
 22. In the ***Fact Sheet***, which provides some more overview and statistical information about the new file, go to tab ***Data Preview***.<br><br>
 ![](/exercises/ex1/images/ex1-054b.JPG)<br><br>
 
-23. Success! Now you can see that the EPM Customer data got loaded into the target file in S3. While the Pipeline is running, this file would get automatically updated with each change in the S/4HANA data sources (the tables `SNWD_SO`, `SNWD_SO_I`, `SNWD_PD`, `SNWD_TEXTS` joined through the ABAP CDS View `Z_CDS_EPM_SO`).<br><br>
+23. Success! Now you can see that the EPM Customer data got loaded into the target file in DI Data Lake. While the Pipeline is running, this file would get automatically updated with each change in the S/4HANA data sources (the tables `SNWD_SO`, `SNWD_SO_I`, `SNWD_PD`, `SNWD_TEXTS` joined through the ABAP CDS View `Z_CDS_EPM_SO`).<br><br>
 ![](/exercises/ex1/images/ex1-055b.JPG)<br><br>
 
 24. However, in order to go on with the exercise, please stop the Pipeline for now. We will validate the delta processing in Exercise 2.<br><br>
@@ -286,7 +286,7 @@ Open the configuration of the ***Get Header*** operator and select ***only once*
 As a next step, you will enrich the Sales Order data with some Customer Details (e.g. Name and Legal Form) during the Replication process.
 
 
-## Exercise 1.4 - Extend the Pipeline for joining Sales Order with Customer data for each change in Sales Orders and persist results in S3
+## Exercise 1.4 - Extend the Pipeline for joining Sales Order with Customer data for each change in Sales Orders and persist results in DI Data Lake
 
 In this last part of the S/4HANA ABAP CDS View intergration exercise, you will establish a Pipeline that replicated the Sales Order data from the delta-enabled ABAP CDS View in S/4HANA and joins it with some of the details that you have replicated from the Customer master data, i.e. company name and legal form.
 
@@ -329,7 +329,7 @@ The Graph Terminanor allows us to run the Pipeline once, and when the new file g
 11. From the list of operators on the left side, drag the ***Structured File Consumer*** operator and drop it into the Pipeline canvas. Then open the configuration panel and do the following entries:
    - Increase the **Fetch size** to `10000`
    
-   Then click the pencil of the **Source Object** parameter to configure the source file located in the S3 connection. Drill down to your individual folder under **DA281** and select the file **`Sales_Order_Staging`**. Then click ***OK***.<br><br>
+   Then click the pencil of the **Source Object** parameter to configure the source file located in the DI Data Lake connection. Drill down to your individual folder under **DA281** and select the file **`Sales_Order_Staging`**. Then click ***OK***.<br><br>
    ![](/exercises/ex1/images/ex1-131b.JPG)<br><br>
      
 12. Select Service to SDL and select the previously used Connection ID DI_DATA_LAKE: <br><br> 
@@ -348,7 +348,7 @@ The Graph Terminanor allows us to run the Pipeline once, and when the new file g
 14. Set the parameter Fall ***on String Truncation*** to false by switching it off: <br><br>
 ![](/exercises/ex1/images/ex1-069b.JPG)<br><br>
 
-	You are now able to open the ***Data Preview*** of the connected file in S3. Give it a try, if you want!<br><br>
+	You are now able to open the ***Data Preview*** of the connected file in DI Data Lake. Give it a try, if you want!<br><br>
 	For the Preview you can choose between the preview of data how is stored in the source or the adapted data in case you have performed any changes:<br><br>
 	![](/exercises/ex1/images/ex1-070b.JPG)<br><br>
 	![](/exercises/ex1/images/ex1-071b.JPG)<br><br>
@@ -437,7 +437,7 @@ The Graph Terminanor allows us to run the Pipeline once, and when the new file g
 	Enter a name of the target folder, which we will sue to store our files, e.g. ***Enriched_Sales_Order*** and click on ***Add*** <br><br>
 	![](/exercises/ex1/images/ex1-120b.JPG)<br><br>
 	
-	You will now see the folder is being added in the S3 Object store. Select it and click on ***OK***.<br><br>
+	You will now see the folder is being added in the DI Data Lake Object store. Select it and click on ***OK***.<br><br>
 	
 	The Target is now being updated to the folder you specified, which we will use to store our enriched sales orders in form of part-files.<br><br>
 	![](/exercises/ex1/images/ex1-121b.JPG)<br><br>
@@ -466,7 +466,7 @@ The Graph Terminanor allows us to run the Pipeline once, and when the new file g
 33. ***Run*** the Pipeline: <br><br>
 ![](/exercises/ex1/images/ex1-095b.JPG)<br><br>
 
-34. When the Pipeline is in status ***running***, you can take a look into your folder in the S3 bucket, again using the ***Data Intelligence Metadata Explorer*** application.     After drilling to your specifiec folder DA281/XXXX, where XXXX stand for your user ID e.g. TA99, you should see the folder that was specified in the *Structured File Producer*  operator (= "Enriched_Sales_Order").<br><br>
+34. When the Pipeline is in status ***running***, you can take a look into your folder in the DI Data Lake bucket, again using the ***Data Intelligence Metadata Explorer*** application.     After drilling to your specifiec folder DA281/XXXX, where XXXX stand for your user ID e.g. TA99, you should see the folder that was specified in the *Structured File Producer*  operator (= "Enriched_Sales_Order").<br><br>
     ![](/exercises/ex1/images/ex1-122b.JPG)<br><br>
     
     Inside the directory you will see that one part file has been generated where our enriched sales orders are stored. Click the ***Glasses*** icon on that tile in order to see the ***Data Preview*** of the ***Fact Sheet***.<br><br>
@@ -478,7 +478,7 @@ The Graph Terminanor allows us to run the Pipeline once, and when the new file g
 35. As you can see in the Data Preview tab, the two columns with the company name and the legal form of the Customer Master Data table have been added to the Sales Order data.<br><br>
 ![](/exercises/ex1/images/ex1-116b.JPG)<br><br>
 
-36. As long as the Pipeline is running, you would now receive any updates in S/4HANA on the EPM Sales Order data, enriched with the lookups of the EPM Customer master data. In this particular example every update in the source S/4 HANA system would trigger a new file being generated in the specified S3 folder. The approach is a simple example for our hands-on session and can be further extended in a real project, e.g. by merging smaller delta files into bigger ones based on a defined file size threshold. The file in S3 would look as displayed below. In case an update happened int he source S/4 HANA system you get the ***update*** indicator "U" in the column "/1DH/OPERATION".<br><br>
+36. As long as the Pipeline is running, you would now receive any updates in S/4HANA on the EPM Sales Order data, enriched with the lookups of the EPM Customer master data. In this particular example every update in the source S/4 HANA system would trigger a new file being generated in the specified DI Data Lake folder. The approach is a simple example for our hands-on session and can be further extended in a real project, e.g. by merging smaller delta files into bigger ones based on a defined file size threshold. The file in DI Data Lake would look as displayed below. In case an update happened int he source S/4 HANA system you get the ***update*** indicator "U" in the column "/1DH/OPERATION".<br><br>
 ![](/exercises/ex1/images/ex1-118b.JPG)<br><br>
 
 ## Summary
@@ -508,8 +508,8 @@ Please continue to [Exercise 1.5 - Using a custom ABAP Operator to verify your D
 - [Exercise 1 - Replicating data from S/4HANA ABAP CDS Views in SAP Data Intelligence](README.md)
     - [Exercise 1.1 - Consume the EPM Business Partner ABAP CDS Views in SAP Data Intelligence](README.md#exercise-11-sub-exercise-1-description)
     - [Exercise 1.2 - Extend the Pipeline to transfer the Customer data into a HANA Cloud Database with Initial Load mode](README.md#exercise-12-sub-exercise-2-description)
-    - [Exercise 1.3 - Implement a Pipeline for delta transfer of enhanced EPM Sales Order data from S/4HANA to an S3 Object Store](README.md#exercise-13-sub-exercise-1-description)
-    - [Exercise 1.4 - Extend the Pipeline for joining Sales Order with Customer data for each change in Sales Orders and persist results in S3](README.md#exercise-14-sub-exercise-1-description)
+    - [Exercise 1.3 - Implement a Pipeline for delta transfer of enhanced EPM Sales Order data from S/4HANA to an DI Data Lake Object Store](README.md#exercise-13-sub-exercise-1-description)
+    - [Exercise 1.4 - Extend the Pipeline for joining Sales Order with Customer data for each change in Sales Orders and persist results in DI Data Lake](README.md#exercise-14-sub-exercise-1-description)
     - [Exercise 1.5 - Using a custom ABAP Operator to verify your Delta Replication of EPM Sales Orders](../../exercises/ex2/)
 
 - [Exercise 2 - Integrate ABAP CDS Views in SAP Data Intelligence Replication Management Flow](../../exercises/ex3/README.md#exercise-3---integrate-abap-cds-views-in-sap-data-intelligence-replication-management-flow)
