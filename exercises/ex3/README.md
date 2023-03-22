@@ -33,15 +33,15 @@ For the integration of ABAP CDS Views in S/4HANA, SAP Data Intelligence provides
 
 ![RF Configuration](img/RF_Configuration.png)
 
-1. After filling the necessary properties for the Replication Flow, we click on the Tasks tab to replicate the CDS View **Z_CDS_EPM_SO**. 
-2. Click on the Create button to create a task for the CDS View replication
+6. After filling the necessary properties for the Replication Flow, we click on the Tasks tab to replicate the CDS View **Z_CDS_EPM_SO**. 
+7. Click on the Create button to create a task for the CDS View replication
 
 ![RF Create Task](img/RF_Create_Task.png)
 
-1. Select the CDS View by navigating to the TMP folder and click on the CDS View **Z_CDS_EPM_SO**. To add the CDS View to the Replication Flow click the Ok button on the Pop-Up window
-2. Repeat step 8 for the CDS views **Z_CDS_EPM_PO** and **Z_CDS_EPM_PD**.
+8. Select the CDS View by searching for the pattern Z_CDS and navigate to the TMP folder. Click on the CDS View **Z_CDS_EPM_SO**. To add the CDS View to the Replication Flow click the Ok button on the Pop-Up window
+9. Repeat step 8 for the CDS views **Z_CDS_EPM_PO** and **Z_CDS_EPM_PD**.
 
-3.  After adding all three CDS views to the created Replication Flow, change the Load Type of each CDS View from Initial Only to Initial and Delta over the drop-down menu in the column Load Type.
+10.  After adding all three CDS views to the created Replication Flow, change the Load Type of each CDS View from Initial Only to Initial and Delta over the drop-down menu in the column Load Type.
 
 ![RF Task Overview](img/RF_Replication_Details.png)
 
@@ -91,10 +91,12 @@ For the integration of ABAP CDS Views in S/4HANA, SAP Data Intelligence provides
 21. To navigate to the replicated datasets click through with the following steps
     - Click on HANA_CLOUD tile
     - Click on TECHED_DA281 tile
-    - Click on the replicated datasets **Z_CDS_EPM_SO**, **Z_CDS_EPM_PO**, **Z_CDS_EPM_PD**
+    - Click for the replicated dataset **Z_CDS_EPM_SO**, on the glasses icon
     - Click for each dataset on the Data Preview tab and explore for each dataset the data replicated
 
-22.  After the replication flow has successfully run and you explored the data, execute the Custom ABAP operator created in [Exercise 2](../ex2/README.md#exercise-15---using-a-custom-abap-operator-to-verify-your-delta-replication-of-epm-sales-orders) to create new sales orders.
+22. Repeat step 21 for the CDS Views **Z_CDS_EPM_PO** and **Z_CDS_EPM_PD**
+
+23.  After the replication flow has successfully run and you explored the data, execute the Custom ABAP operator created in [Exercise 2](../ex2/README.md#exercise-15---using-a-custom-abap-operator-to-verify-your-delta-replication-of-epm-sales-orders) to create new sales orders.
 
 
 ## Summary
